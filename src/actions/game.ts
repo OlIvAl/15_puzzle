@@ -41,6 +41,7 @@ const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkAction<void,
         || (((arr[index + 1].col + BOARD_TILE_SIZE * arr[index + 1].row) - (tile.col + BOARD_TILE_SIZE * tile.row)) === 1)
     ))) {
       dispatch(winActionCreator());
+      localStorage.removeItem('state');
     }
   };
 
@@ -59,6 +60,8 @@ export const moveTileAsyncActionCreator: IMoveTileAsyncActionCreator = (
       || (Math.abs(hole.row - tile.row) === 1) && (hole.col === tile.col)) {
       // координаты старые, меняем в редьюсере
       dispatch(moveTileActionCreator(tile));
+
+      localStorage.setItem('state', JSON.stringify(getState()));
 
       dispatch(checkWinAsyncActionCreator());
     }

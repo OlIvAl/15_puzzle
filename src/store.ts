@@ -23,7 +23,7 @@ export interface IAppState {
   modal: string;
 }
 
-export const initState: IAppState = {
+export const initState: IAppState = JSON.parse(localStorage.getItem('state') || 'null') || {
   tiles: shuffleArr<number>(
     Array(BOARD_TILE_SIZE * BOARD_TILE_SIZE).fill(undefined)
       .map((_, index: number): number => (index))
