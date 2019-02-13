@@ -1,0 +1,1 @@
+export const MOVE_TILE_ACTION: string = 'MOVE_TILE_ACTION';

@@ -10,6 +10,7 @@
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.5",
+    "reselect": "^4.0.0",
     "typescript": "3.3.3"
   },
   "scripts": {
@@ -26,5 +27,13 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@types/react-redux": "^7.0.1",
+    "@types/redux-logger": "^3.0.6",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  }
 }

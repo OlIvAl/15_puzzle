@@ -1,97 +1,77 @@
-import React, {CSSProperties} from 'react';
-import './App.css';
+import React from 'react';
+import Bord from './components/Bord';
+import Tile from './components/Tile';
+import Counter from './components/Counter';
+import {IAppState} from './store';
+import {IMoveTileAsyncActionCreator} from './interfaces/asyncActionCreators';
+import {connect, MapDispatchToPropsNonObject, MapDispatchToPropsParam} from 'react-redux';
+import {counterSelector, ITileWithCoords, tilesSelector, tilesWithCoordsSelector} from './selectors';
+import {moveTileAsyncActionCreator} from './actions/game';
 
-function shuffleMatrix(matrix: number[][]) {
-  function shuffleArr<T>(a: T[]): T[] {
-    for (let i: number = a.length - 1; i > 0; i--) {
-      const randI: number = Math.floor(Math.random() * (i + 1));
-      [a[i], a[randI]] = [a[randI], a[i]];
-    }
-    return a;
-  }
-
-  function getCoordArrFromMatrix<T>(matr: T[][]): number[][] {
-    return matr.map((row: T[], rowIndex: number): number[][] => (
-      row.map((item: T, itemIndex: number): number[] => (
-        [rowIndex, itemIndex]
-      ))
-    )).flat(1);
-  }
-
-  const coordArr: number[][] = getCoordArrFromMatrix<number>(matrix);
-
-  const shuffleCoordArr: number[][] = shuffleArr<number[]>(coordArr);
-
-  return matrix.map((row: number[], rowIndex: number): number[] => (
-    row.map((_, itemIndex: number): number => (
-      matrix[shuffleCoordArr[itemIndex + (matrix.length * rowIndex)][0]][shuffleCoordArr[itemIndex + (matrix.length * rowIndex)][1]]
-    ))
-  ));
+interface IFieldsFromState extends Pick<IAppState, 'tiles' | 'counter'>{
+  tilesWithCoords: ITileWithCoords[]
 }
 
-const BORD_TILE_SIZE: number = 4;
+interface IDispatchMethods {
+  move: IMoveTileAsyncActionCreator
+}
 
-const TILE_SIZE: number = 100;
-const TILE_MARGIN: number = 20;
-const BORD_BORDER: number = 10;
+interface IProps extends IFieldsFromState, IDispatchMethods{
 
-const TILE_ARRAY: number[][] = Array(BORD_TILE_SIZE)
-  .fill(undefined)
-  .map((_, i: number): number[] => (
-    Array(BORD_TILE_SIZE)
-      .fill(undefined)
-      .map((_, j: number): number => (
-        ((i === (BORD_TILE_SIZE - 1)) && (j === (BORD_TILE_SIZE - 1)))
-          ? 0
-          : (j + 1 + (BORD_TILE_SIZE * i))
-      ))
-  ));
+}
 
-const SHUFFLE_TILE_ARRAY: number[][] = shuffleMatrix(TILE_ARRAY);
+/*class App extends React.Component<IProps> {
+  render(): React.ReactNode {
+    const {tilesWithCoords, tiles, counter, move} = this.props;
 
+    return (
 
+    );
+  }
+}*/
 
-const BORD_SIZE: number = TILE_SIZE * 4 + TILE_MARGIN * 3;
-
-const bordSize: CSSProperties = {
-  width: BORD_SIZE,
-  height: BORD_SIZE,
-  borderWidth: BORD_BORDER,
-};
-
-const tileSize: CSSProperties = {
-  width: TILE_SIZE,
-  height: TILE_SIZE
-};
-
-const tileCoords: CSSProperties[][] = TILE_ARRAY.map((_, i: number): CSSProperties[] => (
-  TILE_ARRAY.map((_, j: number): CSSProperties => ({
-    top: i * TILE_SIZE + TILE_MARGIN * i,
-    left: j * TILE_SIZE + TILE_MARGIN * j
-  }))
-));
-
-const App: React.FC = () => (
-  <div
-    className='bord'
-    style={bordSize}
-  >
-    {SHUFFLE_TILE_ARRAY.map((tileArr: number[], i: number): (JSX.Element | null)[] => (
-      tileArr.map((tile: number, j: number): JSX.Element | null => (
-        tile
+const App: React.FC<IProps> = ({tilesWithCoords, tiles, counter, move}): JSX.Element => (
+  <div>
+    <Counter
+      count={counter}
+    />
+    <Bord>
+      {tilesWithCoords.map(({
+                              title,
+                              top,
+                              left
+                            }: ITileWithCoords, index: number): JSX.Element | null => (
+        !!title
           ? (
-            <div
-              className='tile '
-              style={{...tileSize, ...tileCoords[i][j]}}
-              key={tile}
-            >
-              {tile}
-            </div>
+            <Tile
+              title={title}
+              top={top}
+              left={left}
+              tile={tiles[index]}
+              move={move}
+              key={title}
+            />
           )
           : null
-      ))
-    ))}
+      ))}
+    </Bord>
   </div>
+
 );
 
-export default App;
+const mapStateToProps = (state: IAppState): IFieldsFromState => ({
+  tilesWithCoords: tilesWithCoordsSelector(state),
+  tiles: tilesSelector(state),
+  counter: counterSelector(state)
+});
+
+// const mapDispatchToProps: IDispatchMethods = {
+// const mapDispatchToProps: MapDispatchToPropsParam<IDispatchMethods, {}> = {
+const mapDispatchToProps: any = {
+  move: moveTileAsyncActionCreator
+};
+
+export default connect<IFieldsFromState, IDispatchMethods, {}, IAppState>(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
