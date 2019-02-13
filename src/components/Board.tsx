@@ -9,19 +9,19 @@ const bordSize: CSSProperties = {
   borderWidth: BORD_BORDER,
 };
 
-const bordStyle: CSSProperties = {
+const boardStyle: CSSProperties = {
   borderColor: 'brown',
   borderStyle: 'solid',
   position: 'relative'
 };
 
-const Bord: React.FC = ({children}): JSX.Element => (
+const Board: React.FC = ({children}): JSX.Element => (
   <div
     className='bord'
-    style={{...bordSize, ...bordStyle}}
+    style={{...bordSize, ...boardStyle}}
   >
     {children}
   </div>
 );
 
-export default Bord;
+export default Board;

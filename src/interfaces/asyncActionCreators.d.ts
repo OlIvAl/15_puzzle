@@ -6,3 +6,7 @@ import {IAppState} from '../store';
 export interface IMoveTileAsyncActionCreator {
   (tile: ITile): ThunkAction<void, IAppState, null, Action<string>>;
 }
+
+export interface IWinAsyncActionCreator {
+  (): ThunkAction<void, IAppState, null, Action<string>>;
+}

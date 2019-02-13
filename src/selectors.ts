@@ -12,6 +12,7 @@ export interface ITileWithCoords {
 
 export const tilesSelector: Selector<IAppState, ITilesState> = (state: IAppState): ITilesState => state.tiles;
 export const counterSelector: Selector<IAppState, number> = (state: IAppState): number => state.counter;
+export const modalSelector: Selector<IAppState, string> = (state: IAppState): string => state.modal;
 
 export const tilesWithCoordsSelector = createSelector<IAppState, ITilesState, ITileWithCoords[]>(
   tilesSelector,

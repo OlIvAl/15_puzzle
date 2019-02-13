@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import {IMoveTileAction} from '../interfaces/actions';
-import {MOVE_TILE_ACTION} from '../constants/actions';
+import {IMoveTileAction, IWinAction} from '../interfaces/actions';
+import {CLOSE_MODAL_ACTION, MOVE_TILE_ACTION, WIN_ACTION} from '../constants/actions';
 import {ITilesState} from '../interfaces/states';
 import {ITile} from '../interfaces/entities';
+import {WIN_MODAL} from '../constants/modals';
+import {IAppState} from '../store';
 
 function tilesReducer(
   state: ITilesState = {},
@@ -47,7 +49,22 @@ function counterReducer(
   }
 }
 
-export default combineReducers({
+function modalReducer(
+  state: string = '',
+  action: IWinAction
+): string {
+  switch (action.type) {
+    case WIN_ACTION:
+      return WIN_MODAL;
+    case CLOSE_MODAL_ACTION:
+      return '';
+    default:
+      return state;
+  }
+}
+
+export default combineReducers<IAppState>({
   tiles: tilesReducer,
-  counter: counterReducer
+  counter: counterReducer,
+  modal: modalReducer
 });

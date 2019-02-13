@@ -1,19 +1,23 @@
 import React from 'react';
-import Bord from './components/Bord';
+import Bord from './components/Board';
 import Tile from './components/Tile';
 import Counter from './components/Counter';
 import {IAppState} from './store';
 import {IMoveTileAsyncActionCreator} from './interfaces/asyncActionCreators';
 import {connect, MapDispatchToPropsNonObject, MapDispatchToPropsParam} from 'react-redux';
-import {counterSelector, ITileWithCoords, tilesSelector, tilesWithCoordsSelector} from './selectors';
-import {moveTileAsyncActionCreator} from './actions/game';
+import {counterSelector, ITileWithCoords, modalSelector, tilesSelector, tilesWithCoordsSelector} from './selectors';
+import {closeModalActionCreator, moveTileAsyncActionCreator} from './actions/game';
+import Modal from './components/Modal';
+import {WIN_MODAL} from './constants/modals';
+import {ICloseModalActionCreator} from './interfaces/actionCreators';
 
-interface IFieldsFromState extends Pick<IAppState, 'tiles' | 'counter'>{
+interface IFieldsFromState extends Pick<IAppState, 'tiles' | 'counter' | 'modal'>{
   tilesWithCoords: ITileWithCoords[]
 }
 
 interface IDispatchMethods {
-  move: IMoveTileAsyncActionCreator
+  move: IMoveTileAsyncActionCreator;
+  closeModal: ICloseModalActionCreator
 }
 
 interface IProps extends IFieldsFromState, IDispatchMethods{
@@ -30,7 +34,14 @@ interface IProps extends IFieldsFromState, IDispatchMethods{
   }
 }*/
 
-const App: React.FC<IProps> = ({tilesWithCoords, tiles, counter, move}): JSX.Element => (
+const App: React.FC<IProps> = ({
+  tilesWithCoords,
+  tiles,
+  counter,
+  move,
+  modal,
+  closeModal
+}): JSX.Element => (
   <div>
     <Counter
       count={counter}
@@ -55,20 +66,32 @@ const App: React.FC<IProps> = ({tilesWithCoords, tiles, counter, move}): JSX.Ele
           : null
       ))}
     </Bord>
-  </div>
 
+    {modal === WIN_MODAL
+      ? <Modal
+          onClose={closeModal}
+        >
+          You WIN!!!<br/>
+          Count: {counter}
+          Time: 0
+        </Modal>
+      : null
+    }
+  </div>
 );
 
 const mapStateToProps = (state: IAppState): IFieldsFromState => ({
   tilesWithCoords: tilesWithCoordsSelector(state),
   tiles: tilesSelector(state),
-  counter: counterSelector(state)
+  counter: counterSelector(state),
+  modal: modalSelector(state),
 });
 
 // const mapDispatchToProps: IDispatchMethods = {
 // const mapDispatchToProps: MapDispatchToPropsParam<IDispatchMethods, {}> = {
 const mapDispatchToProps: any = {
-  move: moveTileAsyncActionCreator
+  move: moveTileAsyncActionCreator,
+  closeModal: closeModalActionCreator,
 };
 
 export default connect<IFieldsFromState, IDispatchMethods, {}, IAppState>(
