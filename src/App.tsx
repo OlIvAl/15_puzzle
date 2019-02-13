@@ -62,7 +62,11 @@ class App extends React.Component<IProps> {
 
     this.props.continueTimer();
   }
-// ToDo: remove event listener
+
+  componentWillUnmount(): void {
+    document.removeEventListener('keydown', this.keypressHandler, false);
+  }
+
   render(): React.ReactNode {
     const {
       tilesWithCoords,
