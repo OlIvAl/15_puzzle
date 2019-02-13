@@ -52,11 +52,8 @@ const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkAction<void,
     const state: IAppState = getState();
     const tiles: ITilesState = state.tiles;
 
-    if(Object.values(tiles).every((tile: ITile, index: number, arr: ITile[]): boolean => (
-      !tile.title
-        || !arr[index + 1]
-        // проверяем, что элементы расположены по порядку
-        || (((arr[index + 1].col + BOARD_TILE_SIZE * arr[index + 1].row) - (tile.col + BOARD_TILE_SIZE * tile.row)) === 1)
+    if(Object.values(tiles).every(({title, row, col}: ITile): boolean => (
+      !title || (col + 1 + BOARD_TILE_SIZE * row) === title
     ))) {
       dispatch(winActionCreator());
       localStorage.removeItem('state');
