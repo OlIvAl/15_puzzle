@@ -3,10 +3,19 @@ import Bord from './components/Board';
 import Tile from './components/Tile';
 import Counter from './components/Counter';
 import {IAppState} from './store';
-import {IKeypressAsyncActionCreator, IMoveTileAsyncActionCreator} from './interfaces/asyncActionCreators';
+import {
+  IInitNewGameAsyncActionCreator,
+  IKeypressAsyncActionCreator,
+  IMoveTileAsyncActionCreator
+} from './interfaces/asyncActionCreators';
 import {connect, MapDispatchToPropsNonObject, MapDispatchToPropsParam} from 'react-redux';
 import {counterSelector, ITileWithCoords, modalSelector, tilesSelector, tilesWithCoordsSelector} from './selectors';
-import {closeModalActionCreator, keypressAsyncActionCreator, moveTileAsyncActionCreator} from './actions/game';
+import {
+  closeModalActionCreator,
+  initNewGameAsyncActionCreator,
+  keypressAsyncActionCreator,
+  moveTileAsyncActionCreator
+} from './actions/game';
 import Modal from './components/Modal';
 import {WIN_MODAL} from './constants/modals';
 import {ICloseModalActionCreator} from './interfaces/actionCreators';
@@ -16,6 +25,7 @@ interface IFieldsFromState extends Pick<IAppState, 'tiles' | 'counter' | 'modal'
 }
 
 interface IDispatchMethods {
+  initNewGame: IInitNewGameAsyncActionCreator;
   move: IMoveTileAsyncActionCreator;
   keypress: IKeypressAsyncActionCreator;
   closeModal: ICloseModalActionCreator
@@ -45,6 +55,7 @@ class App extends React.Component<IProps> {
       tilesWithCoords,
       tiles,
       counter,
+      initNewGame,
       move,
       modal,
       closeModal
@@ -52,6 +63,7 @@ class App extends React.Component<IProps> {
 
     return (
       <div>
+        <button onClick={initNewGame}>New game</button>
         <Counter
           count={counter}
         />
@@ -101,6 +113,7 @@ const mapStateToProps = (state: IAppState): IFieldsFromState => ({
 // const mapDispatchToProps: IDispatchMethods = {
 // const mapDispatchToProps: MapDispatchToPropsParam<IDispatchMethods, {}> = {
 const mapDispatchToProps: any = {
+  initNewGame: initNewGameAsyncActionCreator,
   move: moveTileAsyncActionCreator,
   keypress: keypressAsyncActionCreator,
   closeModal: closeModalActionCreator,

@@ -1,8 +1,14 @@
-import {ICloseModalAction, IMoveTileAction, IWinAction} from '../interfaces/actions';
-import {ICloseModalActionCreator, IMoveTileActionCreator, IWinActionCreator} from '../interfaces/actionCreators';
-import {ITile} from '../interfaces/entities';
-import {CLOSE_MODAL_ACTION, MOVE_TILE_ACTION, WIN_ACTION} from '../constants/actions';
+import {ICloseModalAction, IInitNewGameAction, IMoveTileAction, IWinAction} from '../interfaces/actions';
 import {
+  ICloseModalActionCreator,
+  IInitNewGameActionCreator,
+  IMoveTileActionCreator,
+  IWinActionCreator
+} from '../interfaces/actionCreators';
+import {ITile} from '../interfaces/entities';
+import {CLOSE_MODAL_ACTION, INIT_NEW_GAME_ACTION, MOVE_TILE_ACTION, WIN_ACTION} from '../constants/actions';
+import {
+  IInitNewGameAsyncActionCreator,
   IKeypressAsyncActionCreator,
   IMoveTileAsyncActionCreator,
   IWinAsyncActionCreator
@@ -25,6 +31,18 @@ const moveTileActionCreator: IMoveTileActionCreator = (tile: ITile): IMoveTileAc
   type: MOVE_TILE_ACTION,
   payload: tile
 });
+
+const initNewGameActionCreator: IInitNewGameActionCreator = (): IInitNewGameAction => ({
+  type: INIT_NEW_GAME_ACTION
+});
+
+export const initNewGameAsyncActionCreator: IInitNewGameAsyncActionCreator = (): ThunkAction<void, IAppState, null, Action<string>> =>
+  (
+    dispatch: ThunkDispatch<IAppState, null, Action<string>>
+  ): void => {
+    localStorage.removeItem('state');
+    dispatch(initNewGameActionCreator());
+  };
 
 const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkAction<void, IAppState, null, Action<string>> =>
   (

@@ -4,18 +4,11 @@ import logger from 'redux-logger';
 import {BOARD_TILE_SIZE} from "./constants/config";
 import rootReducer from './reducers';
 import {ITilesState} from './interfaces/states';
+import {generateShuffleTiles} from './helpers';
 
 const middlewares: Middleware[] = process.env.NODE_ENV === 'development'
   ? [thunk, logger]
   : [thunk];
-
-function shuffleArr<T>(a: T[]): T[] {
-  for (let i: number = a.length - 1; i > 0; i--) {
-    const randI: number = Math.floor(Math.random() * (i + 1));
-    [a[i], a[randI]] = [a[randI], a[i]];
-  }
-  return a;
-}
 
 export interface IAppState {
   tiles: ITilesState;
@@ -24,25 +17,7 @@ export interface IAppState {
 }
 
 export const initState: IAppState = JSON.parse(localStorage.getItem('state') || 'null') || {
-  tiles: shuffleArr<number>(
-    Array(BOARD_TILE_SIZE * BOARD_TILE_SIZE).fill(undefined)
-      .map((_, index: number): number => (index))
-  ).reduce(
-    (
-      accum: ITilesState,
-      currVal: number,
-      index: number
-    ): ITilesState => {
-      accum[currVal] = {
-        title: currVal,
-        row: Math.floor(index / BOARD_TILE_SIZE),
-        col: index % BOARD_TILE_SIZE
-      };
-
-      return accum;
-    },
-    {}
-  ),
+  tiles: generateShuffleTiles(BOARD_TILE_SIZE),
 /*
   // for tests
   tiles: {
