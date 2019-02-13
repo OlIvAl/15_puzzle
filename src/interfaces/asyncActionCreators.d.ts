@@ -7,6 +7,10 @@ export interface IMoveTileAsyncActionCreator {
   (tile: ITile): ThunkAction<void, IAppState, null, Action<string>>;
 }
 
+export interface IContinueTimerAsyncActionCreator {
+  (): ThunkAction<void, IAppState, null, Action<string>>;
+}
+
 export interface IInitNewGameAsyncActionCreator {
   (): ThunkAction<void, IAppState, null, Action<string>>;
 }

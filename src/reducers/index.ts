@@ -1,7 +1,19 @@
 import { combineReducers } from 'redux';
-import {IInitNewGameAction, IMoveTileAction, IWinAction} from '../interfaces/actions';
-import {CLOSE_MODAL_ACTION, INIT_NEW_GAME_ACTION, MOVE_TILE_ACTION, WIN_ACTION} from '../constants/actions';
-import {ITilesState} from '../interfaces/states';
+import {
+  IIncrementTimerAction,
+  IInitNewGameAction,
+  IInitTimerAction,
+  IMoveTileAction,
+  IWinAction
+} from '../interfaces/actions';
+import {
+  CLOSE_MODAL_ACTION,
+  INCREMENT_TIMER_ACTION,
+  INIT_NEW_GAME_ACTION, INIT_TIMER_ACTION,
+  MOVE_TILE_ACTION,
+  WIN_ACTION
+} from '../constants/actions';
+import {ITilesState, ITimerState} from '../interfaces/states';
 import {ITile} from '../interfaces/entities';
 import {WIN_MODAL} from '../constants/modals';
 import {IAppState} from '../store';
@@ -55,6 +67,34 @@ function counterReducer(
   }
 }
 
+function timerReducer(
+  state: ITimerState = {
+    time: 0,
+    intervalID: undefined
+  },
+  action: IIncrementTimerAction & IInitNewGameAction & IInitTimerAction
+) {
+  switch (action.type) {
+    case INIT_TIMER_ACTION:
+      return{
+        ...state,
+        intervalID: action.payload
+      };
+    case INCREMENT_TIMER_ACTION:
+      return {
+        ...state,
+        time: state.time + 1,
+      };
+    case INIT_NEW_GAME_ACTION:
+      return {
+        time: 0,
+        intervalID: undefined
+      };
+    default:
+      return state;
+  }
+}
+
 function modalReducer(
   state: string = '',
   action: IWinAction
@@ -72,5 +112,6 @@ function modalReducer(
 export default combineReducers<IAppState>({
   tiles: tilesReducer,
   counter: counterReducer,
+  timer: timerReducer,
   modal: modalReducer
 });

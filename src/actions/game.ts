@@ -1,13 +1,26 @@
-import {ICloseModalAction, IInitNewGameAction, IMoveTileAction, IWinAction} from '../interfaces/actions';
 import {
-  ICloseModalActionCreator,
-  IInitNewGameActionCreator,
+  ICloseModalAction,
+  IIncrementTimerAction,
+  IInitNewGameAction, IInitTimerAction,
+  IMoveTileAction,
+  IWinAction
+} from '../interfaces/actions';
+import {
+  ICloseModalActionCreator, IIncrementTimerActionCreator,
+  IInitNewGameActionCreator, IInitTimerActionCreator,
   IMoveTileActionCreator,
   IWinActionCreator
 } from '../interfaces/actionCreators';
 import {ITile} from '../interfaces/entities';
-import {CLOSE_MODAL_ACTION, INIT_NEW_GAME_ACTION, MOVE_TILE_ACTION, WIN_ACTION} from '../constants/actions';
 import {
+  CLOSE_MODAL_ACTION,
+  INCREMENT_TIMER_ACTION,
+  INIT_NEW_GAME_ACTION, INIT_TIMER_ACTION,
+  MOVE_TILE_ACTION,
+  WIN_ACTION
+} from '../constants/actions';
+import {
+  IContinueTimerAsyncActionCreator,
   IInitNewGameAsyncActionCreator,
   IKeypressAsyncActionCreator,
   IMoveTileAsyncActionCreator,
@@ -36,12 +49,51 @@ const initNewGameActionCreator: IInitNewGameActionCreator = (): IInitNewGameActi
   type: INIT_NEW_GAME_ACTION
 });
 
+const initTimerActionCreator: IInitTimerActionCreator = (intervalID: NodeJS.Timeout): IInitTimerAction => ({
+  type: INIT_TIMER_ACTION,
+  payload: intervalID
+});
+
+const incrementTimerActionCreator: IIncrementTimerActionCreator = (): IIncrementTimerAction => ({
+  type: INCREMENT_TIMER_ACTION
+});
+
 export const initNewGameAsyncActionCreator: IInitNewGameAsyncActionCreator = (): ThunkAction<void, IAppState, null, Action<string>> =>
+  (
+    dispatch: ThunkDispatch<IAppState, null, Action<string>>,
+    getState: () => IAppState
+  ): void => {
+    const intervalID: NodeJS.Timeout | undefined = getState().timer.intervalID;
+
+    if (intervalID) {
+      clearInterval(intervalID);
+    }
+
+    dispatch(initNewGameActionCreator());
+    localStorage.removeItem('state');
+  };
+
+export const initTimerAsyncActionCreator = (): ThunkAction<void, IAppState, null, Action<string>> =>
   (
     dispatch: ThunkDispatch<IAppState, null, Action<string>>
   ): void => {
-    localStorage.removeItem('state');
-    dispatch(initNewGameActionCreator());
+    const intervalID: NodeJS.Timeout = setInterval((): void => {
+      dispatch(incrementTimerActionCreator());
+    }, 1000);
+
+    dispatch(initTimerActionCreator(intervalID));
+  };
+
+export const continueTimerAsyncActionCreator: IContinueTimerAsyncActionCreator = (): ThunkAction<void, IAppState, null, Action<string>> =>
+  (
+    dispatch: ThunkDispatch<IAppState, null, Action<string>>,
+    getState: () => IAppState
+  ): void => {
+    const {counter, timer: {time, intervalID}}: IAppState = getState();
+
+    if (counter && intervalID && time) {
+      dispatch(initTimerAsyncActionCreator());
+    }
   };
 
 const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkAction<void, IAppState, null, Action<string>> =>
@@ -51,12 +103,17 @@ const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkAction<void,
   ): void => {
     const state: IAppState = getState();
     const tiles: ITilesState = state.tiles;
+    const intervalID: NodeJS.Timeout | undefined = state.timer.intervalID;
 
     if(Object.values(tiles).every(({title, row, col}: ITile): boolean => (
       !title || (col + 1 + BOARD_TILE_SIZE * row) === title
     ))) {
       dispatch(winActionCreator());
       localStorage.removeItem('state');
+
+      if (intervalID) {
+        clearInterval(intervalID);
+      }
     }
   };
 
@@ -68,6 +125,7 @@ export const moveTileAsyncActionCreator: IMoveTileAsyncActionCreator = (
     getState: () => IAppState
   ): void => {
     const state: IAppState = getState();
+    const counter: number = state.counter;
     const tiles: ITilesState = state.tiles;
     const hole: ITile = tiles[0];
 
@@ -77,6 +135,10 @@ export const moveTileAsyncActionCreator: IMoveTileAsyncActionCreator = (
       dispatch(moveTileActionCreator(tile));
 
       localStorage.setItem('state', JSON.stringify(getState()));
+
+      if (counter === 0) {
+        dispatch(initTimerAsyncActionCreator());
+      }
 
       dispatch(checkWinAsyncActionCreator());
     }

@@ -1,4 +1,11 @@
-import {IMoveTileAction, IIncrementCounterAction, IWinAction, ICloseModalAction, IInitNewGameAction} from './actions';
+import {
+  IMoveTileAction,
+  IWinAction,
+  ICloseModalAction,
+  IInitNewGameAction,
+  IIncrementTimerAction,
+  IInitTimerAction
+} from './actions';
 import {ITile} from './entities';
 
 export interface IMoveTileActionCreator {
@@ -11,6 +18,13 @@ export interface IInitNewGameActionCreator {
 
 export interface IWinActionCreator {
   (): IWinAction;
+}
+
+export interface IInitTimerActionCreator {
+  (intervalID: NodeJS.Timeout): IInitTimerAction;
+}
+export interface IIncrementTimerActionCreator {
+  (): IIncrementTimerAction;
 }
 
 export interface ICloseModalActionCreator {

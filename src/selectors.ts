@@ -11,6 +11,16 @@ export interface ITileWithCoords {
 }
 
 export const tilesSelector: Selector<IAppState, ITilesState> = (state: IAppState): ITilesState => state.tiles;
+export const timerSelector: Selector<IAppState, string> = (state: IAppState): string => {
+  const time: number = state.timer.time;
+  const hour: number = Math.floor(time / 3600);
+  const minute: number = Math.floor((time - hour * 3600) / 60);
+  const second: number = time - hour * 3600 - minute * 60;
+
+  return `${hour.toString().length < 2 ? `0${hour}` : hour}:`
+    + `${minute.toString().length < 2 ? `0${minute}` : minute}:`
+    + `${second.toString().length < 2 ? `0${second}` : second}`
+};
 export const counterSelector: Selector<IAppState, number> = (state: IAppState): number => state.counter;
 export const modalSelector: Selector<IAppState, string> = (state: IAppState): string => state.modal;
 

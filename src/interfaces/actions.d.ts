@@ -1,8 +1,9 @@
 import {AnyAction} from 'redux';
 import {
   CLOSE_MODAL_ACTION,
-  INCREMENT_COUNT_ACTION,
+  INCREMENT_TIMER_ACTION,
   INIT_NEW_GAME_ACTION,
+  INIT_TIMER_ACTION,
   MOVE_TILE_ACTION,
   WIN_ACTION
 } from '../constants/actions';
@@ -19,6 +20,14 @@ export interface IInitNewGameAction {
 
 export interface IWinAction extends AnyAction{
   type: typeof WIN_ACTION;
+}
+
+export interface IInitTimerAction extends AnyAction{
+  type: typeof INIT_TIMER_ACTION;
+  payload: NodeJS.Timeout
+}
+export interface IIncrementTimerAction extends AnyAction{
+  type: typeof INCREMENT_TIMER_ACTION
 }
 
 export interface ICloseModalAction extends AnyAction{

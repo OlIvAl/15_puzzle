@@ -4,14 +4,22 @@ import Tile from './components/Tile';
 import Counter from './components/Counter';
 import {IAppState} from './store';
 import {
+  IContinueTimerAsyncActionCreator,
   IInitNewGameAsyncActionCreator,
   IKeypressAsyncActionCreator,
   IMoveTileAsyncActionCreator
 } from './interfaces/asyncActionCreators';
 import {connect, MapDispatchToPropsNonObject, MapDispatchToPropsParam} from 'react-redux';
-import {counterSelector, ITileWithCoords, modalSelector, tilesSelector, tilesWithCoordsSelector} from './selectors';
 import {
-  closeModalActionCreator,
+  counterSelector,
+  ITileWithCoords,
+  modalSelector,
+  tilesSelector,
+  tilesWithCoordsSelector,
+  timerSelector
+} from './selectors';
+import {
+  closeModalActionCreator, continueTimerAsyncActionCreator,
   initNewGameAsyncActionCreator,
   keypressAsyncActionCreator,
   moveTileAsyncActionCreator
@@ -19,16 +27,19 @@ import {
 import Modal from './components/Modal';
 import {WIN_MODAL} from './constants/modals';
 import {ICloseModalActionCreator} from './interfaces/actionCreators';
+import Timer from './components/Timer';
 
 interface IFieldsFromState extends Pick<IAppState, 'tiles' | 'counter' | 'modal'>{
-  tilesWithCoords: ITileWithCoords[]
+  tilesWithCoords: ITileWithCoords[];
+  time: string;
 }
 
 interface IDispatchMethods {
   initNewGame: IInitNewGameAsyncActionCreator;
   move: IMoveTileAsyncActionCreator;
   keypress: IKeypressAsyncActionCreator;
-  closeModal: ICloseModalActionCreator
+  closeModal: ICloseModalActionCreator;
+  continueTimer: IContinueTimerAsyncActionCreator;
 }
 
 interface IProps extends IFieldsFromState, IDispatchMethods{
@@ -48,13 +59,16 @@ class App extends React.Component<IProps> {
 
   componentDidMount(): void {
     document.addEventListener('keydown', this.keypressHandler, false);
-  }
 
+    this.props.continueTimer();
+  }
+// ToDo: remove event listener
   render(): React.ReactNode {
     const {
       tilesWithCoords,
       tiles,
       counter,
+      time,
       initNewGame,
       move,
       modal,
@@ -66,6 +80,9 @@ class App extends React.Component<IProps> {
         <button onClick={initNewGame}>New game</button>
         <Counter
           count={counter}
+        />
+        <Timer
+          time={time}
         />
         <Bord>
           {tilesWithCoords.map(({
@@ -94,7 +111,7 @@ class App extends React.Component<IProps> {
           >
             You WIN!!!<br/>
             Count: {counter}
-            Time: 0
+            Time: {time}
           </Modal>
           : null
         }
@@ -106,6 +123,7 @@ class App extends React.Component<IProps> {
 const mapStateToProps = (state: IAppState): IFieldsFromState => ({
   tilesWithCoords: tilesWithCoordsSelector(state),
   tiles: tilesSelector(state),
+  time: timerSelector(state),
   counter: counterSelector(state),
   modal: modalSelector(state),
 });
@@ -117,6 +135,7 @@ const mapDispatchToProps: any = {
   move: moveTileAsyncActionCreator,
   keypress: keypressAsyncActionCreator,
   closeModal: closeModalActionCreator,
+  continueTimer: continueTimerAsyncActionCreator
 };
 
 export default connect<IFieldsFromState, IDispatchMethods, {}, IAppState>(

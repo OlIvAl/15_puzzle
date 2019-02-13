@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import {BOARD_TILE_SIZE} from "./constants/config";
 import rootReducer from './reducers';
-import {ITilesState} from './interfaces/states';
+import {ITilesState, ITimerState} from './interfaces/states';
 import {generateShuffleTiles} from './helpers';
 
 const middlewares: Middleware[] = process.env.NODE_ENV === 'development'
@@ -13,6 +13,7 @@ const middlewares: Middleware[] = process.env.NODE_ENV === 'development'
 export interface IAppState {
   tiles: ITilesState;
   counter: number;
+  timer: ITimerState;
   modal: string;
 }
 
@@ -103,6 +104,10 @@ export const initState: IAppState = JSON.parse(localStorage.getItem('state') || 
     },
   },*/
   counter: 0,
+  timer: {
+    time: 0,
+    intervalID: undefined
+  },
   modal: ''
 };
 
