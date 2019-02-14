@@ -25,8 +25,10 @@ const StyledTile = styled('div')<IStyledProps>`
   top: ${({top}: IStyledProps): number => top}px;
   left: ${({left}: IStyledProps): number => left}px;
   
-  &:hover {
-    background: #f5f5f5;
+  @media (hover: hover) {
+    &:hover {
+      background: #f5f5f5;
+    }
   }
   
   @media (max-width: ${BORD_SIZE * 1.2}px) {
