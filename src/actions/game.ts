@@ -105,9 +105,11 @@ const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkAction<void,
     const tiles: ITilesState = state.tiles.present;
     const intervalID: number | undefined = state.timer.intervalID;
 
-    if(Object.values(tiles).every(({title, row, col}: ITile): boolean => (
-      !title || (col + 1 + BOARD_TILE_SIZE * row) === title
-    ))) {
+    if((tiles[0].row === (BOARD_TILE_SIZE - 1))
+      && (tiles[0].col === (BOARD_TILE_SIZE - 1))
+      && Object.values(tiles).every(({title, row, col}: ITile): boolean => (
+        !title || (col + 1 + BOARD_TILE_SIZE * row) === title
+      ))) {
       dispatch(winActionCreator());
       localStorage.removeItem('state');
 

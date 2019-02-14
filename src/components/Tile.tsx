@@ -44,8 +44,6 @@ interface IState {
   coef: number;
 }
 
-// state.koeff for coords and recalc
-
 class Tile extends React.Component<IProps, IState> {
   state: IState = {
     coef: 1
