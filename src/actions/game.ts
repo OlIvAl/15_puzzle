@@ -91,7 +91,7 @@ export const continueTimerAsyncActionCreator: IContinueTimerAsyncActionCreator =
   ): void => {
     const {counter, timer: {time, intervalID}}: IAppState = getState();
 
-    if (counter.present && intervalID && time) {
+    if (counter && intervalID && time) {
       dispatch(initTimerAsyncActionCreator());
     }
   };
@@ -125,7 +125,7 @@ export const moveTileAsyncActionCreator: IMoveTileAsyncActionCreator = (
     getState: () => IAppState
   ): void => {
     const state: IAppState = getState();
-    const counter: number = state.counter.present;
+    const counter: number = state.counter;
     const tiles: ITilesState = state.tiles.present;
     const hole: ITile = tiles[0];
 

@@ -89,7 +89,12 @@ class App extends React.Component<IProps> {
     return (
       <div>
         <button onClick={initNewGame}>New game</button>
-        <button onClick={undo}>Undo</button>
+        <button
+          onClick={undo}
+          disabled={!counter}
+        >
+          Undo
+        </button>
         <Counter
           count={counter}
         />

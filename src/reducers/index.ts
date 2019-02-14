@@ -9,7 +9,7 @@ import undoable from 'redux-undo';
 // ToDo: research it
 export default combineReducers<IAppState>({
   tiles: undoable(tilesReducer as Reducer),
-  counter: undoable(counterReducer as Reducer),
-  timer: timerReducer as Reducer,
+  counter: counterReducer,
+  timer: timerReducer,
   modal: modalReducer,
 });

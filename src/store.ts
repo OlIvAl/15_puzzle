@@ -13,7 +13,7 @@ const middlewares: Middleware[] = process.env.NODE_ENV === 'development'
 
 export interface IAppState {
   tiles: StateWithHistory<ITilesState>;
-  counter: StateWithHistory<number>;
+  counter: number;
   timer: ITimerState;
   modal: string;
 }
