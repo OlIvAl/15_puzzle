@@ -5,14 +5,15 @@ import {BOARD_TILE_SIZE} from "./constants/config";
 import rootReducer from './reducers';
 import {ITilesState, ITimerState} from './interfaces/states';
 import {generateShuffleTiles} from './helpers';
+import {StateWithHistory} from "redux-undo";
 
 const middlewares: Middleware[] = process.env.NODE_ENV === 'development'
   ? [thunk, logger]
   : [thunk];
 
 export interface IAppState {
-  tiles: ITilesState;
-  counter: number;
+  tiles: StateWithHistory<ITilesState>;
+  counter: StateWithHistory<number>;
   timer: ITimerState;
   modal: string;
 }

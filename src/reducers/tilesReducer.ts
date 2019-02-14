@@ -4,12 +4,12 @@ import {INIT_NEW_GAME_ACTION, MOVE_TILE_ACTION} from '../constants/actions';
 import {ITile} from '../interfaces/entities';
 import {generateShuffleTiles} from '../helpers';
 import {BOARD_TILE_SIZE} from '../constants/config';
+import {Reducer} from 'redux';
 
-export default
-function tilesReducer(
-  state: ITilesState = {},
-  action: IMoveTileAction & IInitNewGameAction
-): ITilesState {
+const tilesReducer: Reducer<ITilesState, IMoveTileAction & IInitNewGameAction> = (
+  state = {},
+  action
+): ITilesState => {
   switch (action.type) {
     case MOVE_TILE_ACTION:
       const hole: ITile = state[0];
@@ -37,4 +37,6 @@ function tilesReducer(
     default:
       return state;
   }
-}
+};
+
+export default tilesReducer;

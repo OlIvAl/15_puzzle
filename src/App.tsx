@@ -28,8 +28,13 @@ import Modal from './components/Modal';
 import {WIN_MODAL} from './constants/modals';
 import {ICloseModalActionCreator} from './interfaces/actionCreators';
 import Timer from './components/Timer';
+import {ITilesState} from './interfaces/states';
+import { ActionCreators as UndoActionCreators } from 'redux-undo';
+import {Action} from 'redux';
 
-interface IFieldsFromState extends Pick<IAppState, 'tiles' | 'counter' | 'modal'>{
+interface IFieldsFromState extends Pick<IAppState, 'modal'>{
+  tiles: ITilesState;
+  counter: number;
   tilesWithCoords: ITileWithCoords[];
   time: string;
 }
@@ -40,6 +45,7 @@ interface IDispatchMethods {
   keypress: IKeypressAsyncActionCreator;
   closeModal: ICloseModalActionCreator;
   continueTimer: IContinueTimerAsyncActionCreator;
+  undo: () => Action
 }
 
 interface IProps extends IFieldsFromState, IDispatchMethods{
@@ -76,12 +82,14 @@ class App extends React.Component<IProps> {
       initNewGame,
       move,
       modal,
-      closeModal
+      closeModal,
+      undo
     } = this.props;
 
     return (
       <div>
         <button onClick={initNewGame}>New game</button>
+        <button onClick={undo}>Undo</button>
         <Counter
           count={counter}
         />
@@ -139,7 +147,8 @@ const mapDispatchToProps: any = {
   move: moveTileAsyncActionCreator,
   keypress: keypressAsyncActionCreator,
   closeModal: closeModalActionCreator,
-  continueTimer: continueTimerAsyncActionCreator
+  continueTimer: continueTimerAsyncActionCreator,
+  undo: UndoActionCreators.undo
 };
 
 export default connect<IFieldsFromState, IDispatchMethods, {}, IAppState>(

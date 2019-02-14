@@ -14,7 +14,7 @@ export interface IMoveTileAction extends AnyAction{
   payload: ITile
 }
 
-export interface IInitNewGameAction {
+export interface IInitNewGameAction extends AnyAction {
   type: typeof INIT_NEW_GAME_ACTION;
 }
 

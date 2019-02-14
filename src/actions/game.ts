@@ -91,7 +91,7 @@ export const continueTimerAsyncActionCreator: IContinueTimerAsyncActionCreator =
   ): void => {
     const {counter, timer: {time, intervalID}}: IAppState = getState();
 
-    if (counter && intervalID && time) {
+    if (counter.present && intervalID && time) {
       dispatch(initTimerAsyncActionCreator());
     }
   };
@@ -102,7 +102,7 @@ const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkAction<void,
     getState: () => IAppState
   ): void => {
     const state: IAppState = getState();
-    const tiles: ITilesState = state.tiles;
+    const tiles: ITilesState = state.tiles.present;
     const intervalID: NodeJS.Timeout | undefined = state.timer.intervalID;
 
     if(Object.values(tiles).every(({title, row, col}: ITile): boolean => (
@@ -125,8 +125,8 @@ export const moveTileAsyncActionCreator: IMoveTileAsyncActionCreator = (
     getState: () => IAppState
   ): void => {
     const state: IAppState = getState();
-    const counter: number = state.counter;
-    const tiles: ITilesState = state.tiles;
+    const counter: number = state.counter.present;
+    const tiles: ITilesState = state.tiles.present;
     const hole: ITile = tiles[0];
 
     if ((Math.abs(hole.col - tile.col) === 1) && (hole.row === tile.row)
@@ -153,7 +153,7 @@ export const keypressAsyncActionCreator: IKeypressAsyncActionCreator = (
     getState: () => IAppState
   ): void => {
     const state: IAppState = getState();
-    const tiles: ITilesState = state.tiles;
+    const tiles: ITilesState = state.tiles.present;
     const hole: ITile = tiles[0];
 
     let tile: ITile | undefined = undefined;

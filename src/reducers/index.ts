@@ -1,13 +1,15 @@
-import { combineReducers } from 'redux';
+import {combineReducers, Reducer} from 'redux';
 import {IAppState} from '../store';
 import timerReducer from './timerReducer';
 import modalReducer from './modalReducer';
 import counterReducer from './counterReducer';
 import tilesReducer from './tilesReducer';
+import undoable from 'redux-undo';
 
+// ToDo: research it
 export default combineReducers<IAppState>({
-  tiles: tilesReducer,
-  counter: counterReducer,
-  timer: timerReducer,
-  modal: modalReducer
+  tiles: undoable(tilesReducer as Reducer),
+  counter: undoable(counterReducer as Reducer),
+  timer: timerReducer as Reducer,
+  modal: modalReducer,
 });

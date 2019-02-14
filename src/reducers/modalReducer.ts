@@ -1,12 +1,12 @@
 import {IWinAction} from '../interfaces/actions';
 import {CLOSE_MODAL_ACTION, WIN_ACTION} from '../constants/actions';
 import {WIN_MODAL} from '../constants/modals';
+import {Reducer} from 'redux';
 
-export default
-function modalReducer(
-  state: string = '',
-  action: IWinAction
-): string {
+const modalReducer: Reducer<string, IWinAction> = (
+  state = '',
+  action
+): string => {
   switch (action.type) {
     case WIN_ACTION:
       return WIN_MODAL;
@@ -15,4 +15,6 @@ function modalReducer(
     default:
       return state;
   }
-}
+};
+
+export default modalReducer;

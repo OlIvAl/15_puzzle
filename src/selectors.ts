@@ -10,7 +10,7 @@ export interface ITileWithCoords {
   left: number;
 }
 
-export const tilesSelector: Selector<IAppState, ITilesState> = (state: IAppState): ITilesState => state.tiles;
+export const tilesSelector: Selector<IAppState, ITilesState> = (state) => state.tiles.present;
 export const timerSelector: Selector<IAppState, string> = (state: IAppState): string => {
   const time: number = state.timer.time;
   const hour: number = Math.floor(time / 3600);
@@ -21,7 +21,7 @@ export const timerSelector: Selector<IAppState, string> = (state: IAppState): st
     + `${minute.toString().length < 2 ? `0${minute}` : minute}:`
     + `${second.toString().length < 2 ? `0${second}` : second}`
 };
-export const counterSelector: Selector<IAppState, number> = (state: IAppState): number => state.counter;
+export const counterSelector: Selector<IAppState, number> = (state: IAppState): number => state.counter.present;
 export const modalSelector: Selector<IAppState, string> = (state: IAppState): string => state.modal;
 
 export const tilesWithCoordsSelector = createSelector<IAppState, ITilesState, ITileWithCoords[]>(
