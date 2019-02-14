@@ -5,7 +5,7 @@ interface IProps {
 }
 
 const Timer: React.FC<IProps> = ({time}) => (
-  <div>{time}</div>
+  <div><strong>Time:</strong> {time}</div>
 );
 
 export default Timer;

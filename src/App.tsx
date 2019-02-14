@@ -31,6 +31,10 @@ import Timer from './components/Timer';
 import {ITilesState} from './interfaces/states';
 import { ActionCreators as UndoActionCreators } from 'redux-undo';
 import {Action} from 'redux';
+import TopConsole from './components/TopConsole';
+import Button from './components/Button';
+import BottomConsole from './components/BottomConsole';
+import Wrapper from './components/Wrapper';
 
 interface IFieldsFromState extends Pick<IAppState, 'modal'>{
   tiles: ITilesState;
@@ -87,20 +91,16 @@ class App extends React.Component<IProps> {
     } = this.props;
 
     return (
-      <div>
-        <button onClick={initNewGame}>New game</button>
-        <button
-          onClick={undo}
-          disabled={!counter}
-        >
-          Undo
-        </button>
-        <Counter
-          count={counter}
-        />
-        <Timer
-          time={time}
-        />
+      <Wrapper>
+        <TopConsole>
+          <Counter
+            count={counter}
+          />
+          <Timer
+            time={time}
+          />
+        </TopConsole>
+
         <Bord>
           {tilesWithCoords.map(({
                                   title,
@@ -121,6 +121,21 @@ class App extends React.Component<IProps> {
               : null
           ))}
         </Bord>
+        <BottomConsole>
+          <Button
+            onClick={initNewGame}
+            background='#0d9095'
+          >
+            New game
+          </Button>
+          <Button
+            onClick={undo}
+            disabled={!counter}
+            background='#666'
+          >
+            Undo
+          </Button>
+        </BottomConsole>
 
         {modal === WIN_MODAL
           ? <Modal
@@ -132,7 +147,7 @@ class App extends React.Component<IProps> {
           </Modal>
           : null
         }
-      </div>
+      </Wrapper>
     );
   }
 }

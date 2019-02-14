@@ -5,7 +5,7 @@ interface IProps {
 }
 
 const Counter: React.FC<IProps> = ({count}) => (
-  <div>{count}</div>
+  <div><strong>Count:</strong> {count}</div>
 );
 
 export default Counter

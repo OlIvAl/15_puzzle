@@ -1,7 +1,7 @@
 import React, {CSSProperties} from 'react';
-import {BORD_BORDER, TILE_MARGIN, TILE_SIZE} from '../constants/config';
+import {BOARD_TILE_SIZE, BORD_BORDER, TILE_MARGIN, TILE_SIZE} from '../constants/config';
 
-const BORD_SIZE: number = TILE_SIZE * 4 + TILE_MARGIN * 3;
+const BORD_SIZE: number = (TILE_SIZE * BOARD_TILE_SIZE) + (TILE_MARGIN * (BOARD_TILE_SIZE - 1));
 
 const bordSize: CSSProperties = {
   width: BORD_SIZE,
@@ -10,8 +10,9 @@ const bordSize: CSSProperties = {
 };
 
 const boardStyle: CSSProperties = {
-  borderColor: 'brown',
+  borderColor: '#aaa',
   borderStyle: 'solid',
+  backgroundColor: '#e5e5e5',
   position: 'relative'
 };
 

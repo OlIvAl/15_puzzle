@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac72ca5-e0aa-4ba9-9307-30cc0b6dd05c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/BottomConsole.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TopConsole.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Wrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/game.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/game.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/counterReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/counterReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Counter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/config.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,14 +25,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/reducers/index.ts">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Board.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            <state relative-caret-position="144">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="131" column="26" lean-forward="true" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Wrapper.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/BottomConsole.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="34" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="4" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Counter.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Timer.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Button.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Tile.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/TopConsole.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -64,20 +146,16 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/constants.ts" />
-        <option value="$PROJECT_DIR$/src/constants/config.ts" />
         <option value="$PROJECT_DIR$/src/interfaces/entities.d.ts" />
         <option value="$PROJECT_DIR$/src/reducers/game.ts" />
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/components/Tile.tsx" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/index.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Counter.tsx" />
         <option value="$PROJECT_DIR$/src/constants/modals.ts" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/Modal.tsx" />
         <option value="$PROJECT_DIR$/src/components/Modal/PopUp.tsx" />
         <option value="$PROJECT_DIR$/src/components/Bord.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Board.tsx" />
         <option value="$PROJECT_DIR$/src/components/Modal/Portal.tsx" />
         <option value="$PROJECT_DIR$/src/components/Modal/Backdrop.tsx" />
         <option value="$PROJECT_DIR$/src/components/Modal/index.tsx" />
@@ -85,18 +163,26 @@
         <option value="$PROJECT_DIR$/src/interfaces/states.d.ts" />
         <option value="$PROJECT_DIR$/src/constants/actions.ts" />
         <option value="$PROJECT_DIR$/src/interfaces/actionCreators.d.ts" />
-        <option value="$PROJECT_DIR$/src/components/Timer.tsx" />
         <option value="$PROJECT_DIR$/src/interfaces/asyncActionCreators.d.ts" />
         <option value="$PROJECT_DIR$/src/interfaces/actions.d.ts" />
         <option value="$PROJECT_DIR$/src/reducers/timerReducer.ts" />
         <option value="$PROJECT_DIR$/src/reducers/modalReducer.ts" />
         <option value="$PROJECT_DIR$/src/reducers/tilesReducer.ts" />
-        <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/selectors.ts" />
         <option value="$PROJECT_DIR$/src/store.ts" />
         <option value="$PROJECT_DIR$/src/actions/game.ts" />
         <option value="$PROJECT_DIR$/src/reducers/counterReducer.ts" />
         <option value="$PROJECT_DIR$/src/reducers/index.ts" />
+        <option value="$PROJECT_DIR$/src/components/Board.tsx" />
+        <option value="$PROJECT_DIR$/src/constants/config.ts" />
+        <option value="$PROJECT_DIR$/src/components/Tile.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Counter.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Timer.tsx" />
+        <option value="$PROJECT_DIR$/src/components/BottomConsole.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Wrapper.tsx" />
+        <option value="$PROJECT_DIR$/src/components/TopConsole.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Button.tsx" />
+        <option value="$PROJECT_DIR$/src/App.tsx" />
       </list>
     </option>
   </component>
@@ -141,7 +227,7 @@
               <item name="15_puzzle" type="b2602c69:ProjectViewProjectNode" />
               <item name="15_puzzle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -160,6 +246,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\oliva\WebstormProjects\15_puzzle\src\components" />
       <recent name="C:\Users\oliva\WebstormProjects\15_puzzle" />
     </key>
   </component>
@@ -204,12 +291,12 @@
       <updated>1549969447346</updated>
       <workItem from="1549969448904" duration="19158000" />
       <workItem from="1550040530724" duration="40127000" />
-      <workItem from="1550124832645" duration="5219000" />
+      <workItem from="1550124832645" duration="7856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64504000" />
+    <option name="totallyTimeSpent" value="67141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1608" y="-7" width="1616" height="876" extended-state="6" />
@@ -228,7 +315,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32974428" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32974428" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -280,23 +367,6 @@
     <entry file="file://$PROJECT_DIR$/src/reducers/game.ts" />
     <entry file="file://$PROJECT_DIR$/src/App.css" />
     <entry file="file://$PROJECT_DIR$/src/index.css" />
-    <entry file="file://$PROJECT_DIR$/src/components/Tile.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="43" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/config.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="13" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/redux-thunk/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -308,16 +378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="22" selection-start-column="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Board.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -419,20 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Counter.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Timer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -577,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -597,6 +636,85 @@
           <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Board.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Tile.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Timer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Counter.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BottomConsole.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="34" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wrapper.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TopConsole.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Button.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="131" column="26" lean-forward="true" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

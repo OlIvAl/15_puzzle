@@ -10,13 +10,15 @@ const tileSize: CSSProperties = {
 };
 
 const tileStyle: CSSProperties = {
-  backgroundColor: '#000000',
-  color: '#ffffff',
+  backgroundColor: '#fff',
+  color: '#5f5f5f',
   display: 'flex',
+  border: '1px solid #aaa',
   alignItems: 'center',
   justifyContent: 'center',
-  fontSize: 48,
+  fontSize: 36,
   position: 'absolute',
+  boxSizing: 'border-box'
 };
 
 interface IProps extends ITileWithCoords {
