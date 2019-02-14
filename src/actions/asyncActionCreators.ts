@@ -1,24 +1,4 @@
-import {
-  ICloseModalAction,
-  IIncrementTimerAction,
-  IInitNewGameAction, IInitTimerAction,
-  IMoveTileAction,
-  IWinAction
-} from '../interfaces/actions';
-import {
-  ICloseModalActionCreator, IIncrementTimerActionCreator,
-  IInitNewGameActionCreator, IInitTimerActionCreator,
-  IMoveTileActionCreator,
-  IWinActionCreator
-} from '../interfaces/actionCreators';
 import {ITile} from '../interfaces/entities';
-import {
-  CLOSE_MODAL_ACTION,
-  INCREMENT_TIMER_ACTION,
-  INIT_NEW_GAME_ACTION, INIT_TIMER_ACTION,
-  MOVE_TILE_ACTION,
-  WIN_ACTION
-} from '../constants/actions';
 import {
   IContinueTimerAsyncActionCreator,
   IInitNewGameAsyncActionCreator,
@@ -31,32 +11,14 @@ import {IAppState} from '../store';
 import {Action} from 'redux';
 import {ITilesState} from '../interfaces/states';
 import {BOARD_TILE_SIZE} from '../constants/config';
+import {
+  incrementTimerActionCreator,
+  initNewGameActionCreator,
+  initTimerActionCreator,
+  moveTileActionCreator,
+  winActionCreator
+} from './actionCreators';
 
-export const closeModalActionCreator: ICloseModalActionCreator = (): ICloseModalAction => ({
-  type: CLOSE_MODAL_ACTION
-});
-
-const winActionCreator: IWinActionCreator = (): IWinAction => ({
-  type: WIN_ACTION
-});
-
-const moveTileActionCreator: IMoveTileActionCreator = (tile: ITile): IMoveTileAction => ({
-  type: MOVE_TILE_ACTION,
-  payload: tile
-});
-
-const initNewGameActionCreator: IInitNewGameActionCreator = (): IInitNewGameAction => ({
-  type: INIT_NEW_GAME_ACTION
-});
-
-const initTimerActionCreator: IInitTimerActionCreator = (intervalID: number): IInitTimerAction => ({
-  type: INIT_TIMER_ACTION,
-  payload: intervalID
-});
-
-const incrementTimerActionCreator: IIncrementTimerActionCreator = (): IIncrementTimerAction => ({
-  type: INCREMENT_TIMER_ACTION
-});
 
 export const initNewGameAsyncActionCreator: IInitNewGameAsyncActionCreator = (): ThunkAction<void, IAppState, null, Action<string>> =>
   (

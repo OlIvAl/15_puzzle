@@ -19,11 +19,11 @@ import {
   timerSelector
 } from './selectors';
 import {
-  closeModalActionCreator, continueTimerAsyncActionCreator,
+  continueTimerAsyncActionCreator,
   initNewGameAsyncActionCreator,
   keypressAsyncActionCreator,
   moveTileAsyncActionCreator
-} from './actions/game';
+} from './actions/asyncActionCreators';
 import Modal from './components/Modal';
 import {WIN_MODAL} from './constants/modals';
 import {ICloseModalActionCreator} from './interfaces/actionCreators';
@@ -35,6 +35,7 @@ import TopConsole from './components/TopConsole';
 import Button from './components/Button';
 import BottomConsole from './components/BottomConsole';
 import Wrapper from './components/Wrapper';
+import {closeModalActionCreator} from './actions/actionCreators';
 
 interface IFieldsFromState extends Pick<IAppState, 'modal'>{
   tiles: ITilesState;
