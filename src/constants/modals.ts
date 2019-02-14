@@ -1,1 +1,0 @@
-export const WIN_MODAL = 'WIN_MODAL';
