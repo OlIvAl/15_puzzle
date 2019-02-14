@@ -21,7 +21,7 @@ export interface IWinActionCreator {
 }
 
 export interface IInitTimerActionCreator {
-  (intervalID: NodeJS.Timeout): IInitTimerAction;
+  (intervalID: number): IInitTimerAction;
 }
 export interface IIncrementTimerActionCreator {
   (): IIncrementTimerAction;

@@ -49,7 +49,7 @@ const initNewGameActionCreator: IInitNewGameActionCreator = (): IInitNewGameActi
   type: INIT_NEW_GAME_ACTION
 });
 
-const initTimerActionCreator: IInitTimerActionCreator = (intervalID: NodeJS.Timeout): IInitTimerAction => ({
+const initTimerActionCreator: IInitTimerActionCreator = (intervalID: number): IInitTimerAction => ({
   type: INIT_TIMER_ACTION,
   payload: intervalID
 });
@@ -63,7 +63,7 @@ export const initNewGameAsyncActionCreator: IInitNewGameAsyncActionCreator = ():
     dispatch: ThunkDispatch<IAppState, null, Action<string>>,
     getState: () => IAppState
   ): void => {
-    const intervalID: NodeJS.Timeout | undefined = getState().timer.intervalID;
+    const intervalID: number | undefined = getState().timer.intervalID;
 
     if (intervalID) {
       clearInterval(intervalID);
@@ -77,7 +77,7 @@ export const initTimerAsyncActionCreator = (): ThunkAction<void, IAppState, null
   (
     dispatch: ThunkDispatch<IAppState, null, Action<string>>
   ): void => {
-    const intervalID: NodeJS.Timeout = setInterval((): void => {
+    const intervalID: number = setInterval((): void => {
       dispatch(incrementTimerActionCreator());
     }, 1000);
 
@@ -103,7 +103,7 @@ const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkAction<void,
   ): void => {
     const state: IAppState = getState();
     const tiles: ITilesState = state.tiles.present;
-    const intervalID: NodeJS.Timeout | undefined = state.timer.intervalID;
+    const intervalID: number | undefined = state.timer.intervalID;
 
     if(Object.values(tiles).every(({title, row, col}: ITile): boolean => (
       !title || (col + 1 + BOARD_TILE_SIZE * row) === title

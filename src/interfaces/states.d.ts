@@ -6,5 +6,5 @@ export interface ITilesState {
 
 export interface ITimerState {
   time: number;
-  intervalID: NodeJS.Timeout | undefined;
+  intervalID: number | undefined;
 }

@@ -24,7 +24,7 @@ export interface IWinAction extends AnyAction{
 
 export interface IInitTimerAction extends AnyAction{
   type: typeof INIT_TIMER_ACTION;
-  payload: NodeJS.Timeout
+  payload: number
 }
 export interface IIncrementTimerAction extends AnyAction{
   type: typeof INCREMENT_TIMER_ACTION

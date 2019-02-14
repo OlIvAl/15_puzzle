@@ -124,14 +124,12 @@ class App extends React.Component<IProps> {
         <BottomConsole>
           <Button
             onClick={initNewGame}
-            background='#0d9095'
           >
             New game
           </Button>
           <Button
             onClick={undo}
             disabled={!counter}
-            background='#666'
           >
             Undo
           </Button>
@@ -139,12 +137,11 @@ class App extends React.Component<IProps> {
 
         {modal === WIN_MODAL
           ? <Modal
-            onClose={closeModal}
-          >
-            You WIN!!!<br/>
-            Count: {counter}
-            Time: {time}
-          </Modal>
+              onClose={closeModal}
+            >
+              <strong>Count: </strong>{counter}<br/>
+              <strong>Time: </strong>{time}
+            </Modal>
           : null
         }
       </Wrapper>
