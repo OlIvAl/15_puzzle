@@ -77,6 +77,10 @@ class Tile extends React.Component<IProps, IState> {
 
   componentDidMount(): void {
     this.mql.addListener(this.mediaQueryListener);
+
+    if (this.mql.matches) {
+      this.setState({coef: 1.5});
+    }
   }
 
   componentWillUnmount(): void {
