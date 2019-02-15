@@ -58,7 +58,7 @@ export const continueTimerAsyncActionCreator: IContinueTimerAsyncActionCreator =
     }
   };
 
-const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkAction<void, IAppState, null, Action<string>> =>
+export const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkAction<void, IAppState, null, Action<string>> =>
   (
     dispatch: ThunkDispatch<IAppState, null, Action<string>>,
     getState: () => IAppState

@@ -2,10 +2,14 @@ import configureStore, {MockStoreCreator, MockStoreEnhanced} from 'redux-mock-st
 import thunk from 'redux-thunk'
 import * as Redux from 'redux';
 import {IAppState} from '../store';
-import {initNewGameAsyncActionCreator, initTimerAsyncActionCreator} from './asyncActionCreators';
-import {INCREMENT_TIMER_ACTION, INIT_NEW_GAME_ACTION, INIT_NEW_TIMER_ACTION} from '../constants/actions';
+import {
+  checkWinAsyncActionCreator,
+  initNewGameAsyncActionCreator,
+  initTimerAsyncActionCreator
+} from './asyncActionCreators';
+import {INCREMENT_TIMER_ACTION, INIT_NEW_GAME_ACTION, INIT_NEW_TIMER_ACTION, WIN_ACTION} from '../constants/actions';
 import {StateWithHistory} from "redux-undo";
-import {ITilesState} from '../interfaces/states';
+import {IWinAction} from '../interfaces/actions';
 
 jest.useFakeTimers();
 
@@ -20,6 +24,8 @@ describe('asyncActionCreators', () => {
   let storeWithoutIntervalAndOrderedTiles: MockStoreEnhanced<Partial<IAppState>>;
   let storeWithIntervalAndNotOrderedTiles: MockStoreEnhanced<Partial<IAppState>>;
   let storeWithIntervalAndOrderedTiles: MockStoreEnhanced<Partial<IAppState>>;
+  let storeWithIntervalAndNotOrderedTilesAndLastHole: MockStoreEnhanced<Partial<IAppState>>;
+  let storeWithoutIntervalAndNotOrderedTilesAndLastHole: MockStoreEnhanced<Partial<IAppState>>;
 
   const emptyCounter: Pick<IAppState, 'counter'> = {counter: 0};
   const notEmptyCounter: Pick<IAppState, 'counter'> = {counter: 10};
@@ -37,8 +43,19 @@ describe('asyncActionCreators', () => {
     }
   };
 
-  const orderedTiles: {tiles: Partial<StateWithHistory<ITilesState>>} = {
+  const stateWithHistoryPartialFields: StateWithHistory<{}> = {
+    present: {},
+    past: [],
+    group: [],
+    future: [],
+    limit: 4,
+    _latestUnfiltered: {},
+    index: 0
+  };
+
+  const orderedTiles: Pick<IAppState, 'tiles'> = {
     tiles: {
+      ...stateWithHistoryPartialFields,
       present: {
         1: {
           title: 1,
@@ -120,11 +137,99 @@ describe('asyncActionCreators', () => {
           row: 3,
           col: 3
         },
+      },
+    }
+  };
+  const notOrderedTilesWithLastHole: Pick<IAppState, 'tiles'> = {
+    tiles: {
+      ...stateWithHistoryPartialFields,
+      present: {
+        1: {
+          title: 1,
+          row: 0,
+          col: 0
+        },
+        2: {
+          title: 2,
+          row: 1,
+          col: 1
+        },
+        3: {
+          title: 3,
+          row: 0,
+          col: 2
+        },
+        4: {
+          title: 4,
+          row: 0,
+          col: 3
+        },
+        5: {
+          title: 5,
+          row: 1,
+          col: 0
+        },
+        6: {
+          title: 6,
+          row: 0,
+          col: 1
+        },
+        7: {
+          title: 7,
+          row: 1,
+          col: 2
+        },
+        8: {
+          title: 8,
+          row: 1,
+          col: 3
+        },
+        9: {
+          title: 9,
+          row: 2,
+          col: 1
+        },
+        10: {
+          title: 10,
+          row: 2,
+          col: 0
+        },
+        11: {
+          title: 11,
+          row: 2,
+          col: 2
+        },
+        12: {
+          title: 12,
+          row: 2,
+          col: 3
+        },
+        13: {
+          title: 13,
+          row: 3,
+          col: 0
+        },
+        14: {
+          title: 14,
+          row: 3,
+          col: 1
+        },
+        15: {
+          title: 15,
+          row: 3,
+          col: 2
+        },
+        0: {
+          title: 0,
+          row: 3,
+          col: 3
+        },
       }
     }
   };
-  const notOrderedTiles: {tiles: Partial<StateWithHistory<ITilesState>>} = {
+  const notOrderedTilesWithoutLastHole: Pick<IAppState, 'tiles'> = {
     tiles: {
+      ...stateWithHistoryPartialFields,
       present: {
         1: {
           title: 1,
@@ -218,7 +323,38 @@ describe('asyncActionCreators', () => {
 
     storeWithInterval = mockStore({
       ...notEmptyCounter,
-      ...notEmptyTimer
+      ...notEmptyTimer,
+    });
+
+    storeWithoutIntervalAndNotOrderedTiles = mockStore({
+      ...emptyCounter,
+      ...emptyTimer,
+      ...notOrderedTilesWithoutLastHole
+    });
+    storeWithoutIntervalAndOrderedTiles = mockStore({
+      ...emptyCounter,
+      ...emptyTimer,
+      ...orderedTiles
+    });
+    storeWithIntervalAndNotOrderedTiles = mockStore({
+      ...notEmptyCounter,
+      ...notEmptyTimer,
+      ...notOrderedTilesWithoutLastHole
+    });
+    storeWithIntervalAndOrderedTiles = mockStore({
+      ...notEmptyCounter,
+      ...notEmptyTimer,
+      ...orderedTiles
+    });
+    storeWithIntervalAndNotOrderedTilesAndLastHole = mockStore({
+      ...notEmptyCounter,
+      ...notEmptyTimer,
+      ...notOrderedTilesWithLastHole
+    });
+    storeWithoutIntervalAndNotOrderedTilesAndLastHole = mockStore({
+      ...emptyCounter,
+      ...emptyTimer,
+      ...notOrderedTilesWithLastHole
     });
   });
 
@@ -253,7 +389,6 @@ describe('asyncActionCreators', () => {
       // @ts-ignore
       storeWithoutInterval.dispatch(initNewGameAsyncActionCreator());
 
-      // ToDo: ????????
       expect(clearInterval).not.toHaveBeenCalled();
     });
     it('останавливает таймер, если он был запущен', () => {
@@ -334,7 +469,60 @@ describe('asyncActionCreators', () => {
   });
 
   describe('checkWinAsyncActionCreator', () => {
+    it('store с неверным порядком черепков не пройдет проверку', () => {
+      // @ts-ignore
+      storeWithoutIntervalAndNotOrderedTiles.dispatch(checkWinAsyncActionCreator());
+      // @ts-ignore
+      storeWithIntervalAndNotOrderedTiles.dispatch(checkWinAsyncActionCreator());
+      // @ts-ignore
+      storeWithIntervalAndNotOrderedTilesAndLastHole.dispatch(checkWinAsyncActionCreator());
+      // @ts-ignore
+      storeWithoutIntervalAndNotOrderedTilesAndLastHole.dispatch(checkWinAsyncActionCreator());
 
+      const expectedActions: any[] = [];
+
+      expect(storeWithoutIntervalAndNotOrderedTiles.getActions()).toEqual(expectedActions);
+      expect(storeWithIntervalAndNotOrderedTiles.getActions()).toEqual(expectedActions);
+      expect(storeWithIntervalAndNotOrderedTilesAndLastHole.getActions()).toEqual(expectedActions);
+      expect(storeWithoutIntervalAndNotOrderedTilesAndLastHole.getActions()).toEqual(expectedActions);
+    });
+    it('store с верным порядком черепков пройдет проверку, вызавит action победы в игре', () => {
+      // @ts-ignore
+      storeWithoutIntervalAndOrderedTiles.dispatch(checkWinAsyncActionCreator());
+      // @ts-ignore
+      storeWithIntervalAndOrderedTiles.dispatch(checkWinAsyncActionCreator());
+
+      const expectedActions: IWinAction[] = [
+        {
+          type: WIN_ACTION
+        }
+      ];
+
+      expect(storeWithoutIntervalAndOrderedTiles.getActions()).toEqual(expectedActions);
+      expect(storeWithIntervalAndOrderedTiles.getActions()).toEqual(expectedActions);
+    });
+    it('store с верным порядком черепков и таймером пройдет проверку, и остановит таймер', () => {
+      // @ts-ignore
+      storeWithIntervalAndOrderedTiles.dispatch(checkWinAsyncActionCreator());
+
+      expect(clearInterval).toHaveBeenCalledTimes(1);
+      expect(clearInterval).toHaveBeenCalledWith(fakeIntervalID);
+    });
+    it('store с верным порядком черепков пройдет проверку, очистит сохраненную игру', () => {
+      localStorage.setItem('state', JSON.stringify({}));
+
+      // @ts-ignore
+      storeWithoutIntervalAndOrderedTiles.dispatch(checkWinAsyncActionCreator());
+
+      expect(localStorage.getItem('state')).toEqual(null);
+
+      localStorage.setItem('state', JSON.stringify({}));
+
+      // @ts-ignore
+      storeWithIntervalAndOrderedTiles.dispatch(checkWinAsyncActionCreator());
+
+      expect(localStorage.getItem('state')).toEqual(null);
+    });
   });
 
   describe('moveTileAsyncActionCreator', () => {
