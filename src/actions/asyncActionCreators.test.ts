@@ -16,6 +16,10 @@ describe('asyncActionCreators', () => {
   const fakeIntervalID: number = 123;
   let storeWithoutInterval: MockStoreEnhanced<Partial<IAppState>>;
   let storeWithInterval: MockStoreEnhanced<Partial<IAppState>>;
+  let storeWithoutIntervalAndNotOrderedTiles: MockStoreEnhanced<Partial<IAppState>>;
+  let storeWithoutIntervalAndOrderedTiles: MockStoreEnhanced<Partial<IAppState>>;
+  let storeWithIntervalAndNotOrderedTiles: MockStoreEnhanced<Partial<IAppState>>;
+  let storeWithIntervalAndOrderedTiles: MockStoreEnhanced<Partial<IAppState>>;
 
   const emptyCounter: Pick<IAppState, 'counter'> = {counter: 0};
   const notEmptyCounter: Pick<IAppState, 'counter'> = {counter: 10};
@@ -216,6 +220,10 @@ describe('asyncActionCreators', () => {
       ...notEmptyCounter,
       ...notEmptyTimer
     });
+  });
+
+  afterEach(() => {
+    jest.clearAllTimers();
 
     localStorage.clear();
   });
@@ -241,21 +249,19 @@ describe('asyncActionCreators', () => {
 
       expect(localStorage.getItem('state')).toEqual(null);
     });
+    it('не останавливает таймер, если он не был запущен', () => {
+      // @ts-ignore
+      storeWithoutInterval.dispatch(initNewGameAsyncActionCreator());
+
+      // ToDo: ????????
+      expect(clearInterval).not.toHaveBeenCalled();
+    });
     it('останавливает таймер, если он был запущен', () => {
       // @ts-ignore
       storeWithInterval.dispatch(initNewGameAsyncActionCreator());
 
       expect(clearInterval).toHaveBeenCalledTimes(1);
       expect(clearInterval).toHaveBeenCalledWith(fakeIntervalID);
-    });
-    it('не останавливает таймер, если он не был запущен', () => {
-      console.log(storeWithoutInterval.getState());
-
-      // @ts-ignore
-      storeWithoutInterval.dispatch(initNewGameAsyncActionCreator());
-
-      // ToDo: ????????
-      expect(clearInterval).not.toHaveBeenCalled();
     });
   });
 
