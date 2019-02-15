@@ -1,6 +1,6 @@
 import {ITilesState, ITimerState} from '../interfaces/states';
 import {IIncrementTimerAction, IInitNewGameAction, IInitTimerAction} from '../interfaces/actions';
-import {INCREMENT_TIMER_ACTION, INIT_NEW_GAME_ACTION, INIT_TIMER_ACTION} from '../constants/actions';
+import {INCREMENT_TIMER_ACTION, INIT_NEW_GAME_ACTION, INIT_NEW_TIMER_ACTION} from '../constants/actions';
 import {AnyAction, Reducer} from 'redux';
 
 const timerReducer: Reducer<ITimerState, IIncrementTimerAction & IInitNewGameAction & IInitTimerAction> = (
@@ -11,7 +11,7 @@ const timerReducer: Reducer<ITimerState, IIncrementTimerAction & IInitNewGameAct
   action
 ): ITimerState => {
   switch (action.type) {
-    case INIT_TIMER_ACTION:
+    case INIT_NEW_TIMER_ACTION:
       return{
         ...state,
         intervalID: action.payload

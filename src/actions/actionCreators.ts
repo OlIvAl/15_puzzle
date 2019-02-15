@@ -14,7 +14,7 @@ import {
 import {
   CLOSE_MODAL_ACTION, INCREMENT_TIMER_ACTION,
   INIT_NEW_GAME_ACTION,
-  INIT_TIMER_ACTION,
+  INIT_NEW_TIMER_ACTION,
   MOVE_TILE_ACTION,
   WIN_ACTION
 } from '../constants/actions';
@@ -38,7 +38,7 @@ export const initNewGameActionCreator: IInitNewGameActionCreator = (): IInitNewG
 });
 
 export const initTimerActionCreator: IInitTimerActionCreator = (intervalID: number): IInitTimerAction => ({
-  type: INIT_TIMER_ACTION,
+  type: INIT_NEW_TIMER_ACTION,
   payload: intervalID
 });
 

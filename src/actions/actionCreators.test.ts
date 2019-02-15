@@ -50,7 +50,7 @@ describe('actionCreators', () => {
     const expectedTime: number = 10;
 
     const expectedAction: IInitTimerAction = {
-      type: actions.INIT_TIMER_ACTION,
+      type: actions.INIT_NEW_TIMER_ACTION,
       payload: expectedTime
     };
 

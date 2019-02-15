@@ -3,7 +3,7 @@ import {
   CLOSE_MODAL_ACTION,
   INCREMENT_TIMER_ACTION,
   INIT_NEW_GAME_ACTION,
-  INIT_TIMER_ACTION,
+  INIT_NEW_TIMER_ACTION,
   MOVE_TILE_ACTION,
   WIN_ACTION
 } from '../constants/actions';
@@ -23,7 +23,7 @@ export interface IWinAction extends AnyAction{
 }
 
 export interface IInitTimerAction extends AnyAction{
-  type: typeof INIT_TIMER_ACTION;
+  type: typeof INIT_NEW_TIMER_ACTION;
   payload: number
 }
 export interface IIncrementTimerAction extends AnyAction{
