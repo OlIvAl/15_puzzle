@@ -3,7 +3,7 @@ import {INIT_NEW_GAME_ACTION, MOVE_TILE_ACTION} from '../constants/actions';
 import {Reducer} from 'redux';
 import {ActionTypes as UndoActionTypes} from 'redux-undo';
 
-const counterReducer: Reducer<number, IMoveTileAction & IInitNewGameAction> = (
+const counterReducer: Reducer<number, IMoveTileAction | IInitNewGameAction> = (
   state = 0,
   action
 ): number => {

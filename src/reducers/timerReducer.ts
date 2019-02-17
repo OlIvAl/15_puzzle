@@ -3,7 +3,7 @@ import {IIncrementTimerAction, IInitNewGameAction, IInitTimerAction} from '../in
 import {INCREMENT_TIMER_ACTION, INIT_NEW_GAME_ACTION, INIT_NEW_TIMER_ACTION} from '../constants/actions';
 import {AnyAction, Reducer} from 'redux';
 
-const timerReducer: Reducer<ITimerState, IIncrementTimerAction & IInitNewGameAction & IInitTimerAction> = (
+const timerReducer: Reducer<ITimerState, IIncrementTimerAction | IInitNewGameAction | IInitTimerAction> = (
   state = {
     time: 0,
     intervalID: undefined

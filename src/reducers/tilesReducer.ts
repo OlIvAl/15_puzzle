@@ -6,7 +6,7 @@ import {generateShuffleTiles} from '../helpers';
 import {BOARD_TILE_SIZE} from '../constants/config';
 import {Reducer} from 'redux';
 
-const tilesReducer: Reducer<ITilesState, IMoveTileAction & IInitNewGameAction> = (
+const tilesReducer: Reducer<ITilesState, IMoveTileAction | IInitNewGameAction> = (
   state = {},
   action
 ): ITilesState => {
