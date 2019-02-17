@@ -10,7 +10,6 @@ import {ThunkAction, ThunkDispatch} from 'redux-thunk';
 import {IAppState} from '../store';
 import {Action} from 'redux';
 import {ITilesState} from '../interfaces/states';
-import {BOARD_TILE_SIZE} from '../constants/config';
 import {
   incrementTimerActionCreator,
   initNewGameActionCreator,
@@ -18,6 +17,7 @@ import {
   moveTileActionCreator,
   winActionCreator
 } from './actionCreators';
+import {checkMovableTile, checkWinGame, getActiveTileForKeypress} from './helpers';
 
 
 export const initNewGameAsyncActionCreator: IInitNewGameAsyncActionCreator = (): ThunkAction<void, IAppState, null, Action<string>> =>
@@ -67,11 +67,7 @@ export const checkWinAsyncActionCreator: IWinAsyncActionCreator = (): ThunkActio
     const tiles: ITilesState = state.tiles.present;
     const intervalID: number | undefined = state.timer.intervalID;
 
-    if((tiles[0].row === (BOARD_TILE_SIZE - 1))
-      && (tiles[0].col === (BOARD_TILE_SIZE - 1))
-      && Object.values(tiles).every(({title, row, col}: ITile): boolean => (
-        !title || (col + 1 + BOARD_TILE_SIZE * row) === title
-      ))) {
+    if(checkWinGame(tiles)) {
       dispatch(winActionCreator());
       localStorage.removeItem('state');
 
@@ -93,8 +89,7 @@ export const moveTileAsyncActionCreator: IMoveTileAsyncActionCreator = (
     const tiles: ITilesState = state.tiles.present;
     const hole: ITile = tiles[0];
 
-    if ((Math.abs(hole.col - tile.col) === 1) && (hole.row === tile.row)
-      || (Math.abs(hole.row - tile.row) === 1) && (hole.col === tile.col)) {
+    if (checkMovableTile(tile, hole)) {
       // координаты старые, меняем в редьюсере
       dispatch(moveTileActionCreator(tile));
 
@@ -120,28 +115,7 @@ export const keypressAsyncActionCreator: IKeypressAsyncActionCreator = (
     const tiles: ITilesState = state.tiles.present;
     const hole: ITile = tiles[0];
 
-    let tile: ITile | undefined = undefined;
-
-    if ((code === 'ArrowUp') && ((hole.row + 1) < BOARD_TILE_SIZE)) {
-      tile = Object.values(tiles).find((tile: ITile): boolean => (
-        (tile.row === (hole.row + 1)) && (tile.col === hole.col)
-      ));
-    }
-    else if ((code === 'ArrowDown') && ((hole.row) > 0)) {
-      tile = Object.values(tiles).find((tile: ITile): boolean => (
-        (tile.row === (hole.row - 1)) && (tile.col === hole.col)
-      ));
-    }
-    else if ((code === 'ArrowLeft') && ((hole.col + 1) < BOARD_TILE_SIZE)) {
-      tile = Object.values(tiles).find((tile: ITile): boolean => (
-        (tile.row === hole.row) && (tile.col === (hole.col + 1))
-      ));
-    }
-    else if ((code === 'ArrowRight') && (hole.col > 0)) {
-      tile = Object.values(tiles).find((tile: ITile): boolean => (
-        (tile.row === hole.row) && (tile.col === (hole.col - 1))
-      ));
-    }
+    const tile: ITile | undefined = getActiveTileForKeypress(code, tiles, hole);
 
     if (tile) {
       dispatch(moveTileAsyncActionCreator(tile));

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac72ca5-e0aa-4ba9-9307-30cc0b6dd05c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/actions/helpers.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/helpers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/asyncActionCreators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/asyncActionCreators.ts" afterDir="false" />
@@ -22,8 +24,11 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/actions/actionCreators.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+                <state relative-caret-position="157">
+                  <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+                  <folding>
+                    <element signature="e#0#205#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -31,15 +36,26 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/actions/asyncActionCreators.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="78" column="21" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="21" />
+                <state relative-caret-position="252">
+                  <caret line="93" column="42" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="42" />
                   <folding>
                     <element signature="e#0#45#0" expanded="true" />
-                    <element signature="e#892#1112#0" />
                     <element signature="e#1294#1468#0" />
                     <element signature="e#1719#1891#0" />
-                    <element signature="e#2943#3565#0" />
-                    <element signature="e#3826#4934#0" />
+                    <element signature="e#2127#2692#0" />
+                    <element signature="e#3833#4941#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/actions/helpers.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="386">
+                  <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+                  <folding>
+                    <element signature="e#0#49#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -52,69 +68,50 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="426">
-                  <caret line="508" column="65" selection-start-line="508" selection-start-column="65" selection-end-line="508" selection-end-column="65" />
+                <state relative-caret-position="429">
+                  <caret line="812" column="42" selection-start-line="812" selection-start-column="42" selection-end-line="812" selection-end-column="42" />
+                  <caret line="818" column="42" selection-start-line="818" selection-start-column="42" selection-end-line="818" selection-end-column="42" />
+                  <caret line="821" column="42" selection-start-line="821" selection-start-column="42" selection-end-line="821" selection-end-column="42" />
+                  <caret line="827" column="42" selection-start-line="827" selection-start-column="42" selection-end-line="827" selection-end-column="42" />
                   <folding>
                     <element signature="e#0#84#0" expanded="true" />
-                    <element signature="e#1383#1450#0" />
-                    <element signature="e#1502#1577#0" />
-                    <element signature="e#1827#1947#0" />
-                    <element signature="e#1813#3138#0" />
-                    <element signature="e#1843#3128#0" />
-                    <element signature="e#3438#4763#0" />
-                    <element signature="e#3468#4753#0" />
-                    <element signature="e#4832#6157#0" />
-                    <element signature="e#4862#6147#0" />
-                    <element signature="e#6486#6544#0" />
-                    <element signature="e#6676#6755#0" />
-                    <element signature="e#6821#6878#0" />
-                    <element signature="e#6947#6998#0" />
-                    <element signature="e#4612#4671#0" />
-                    <element signature="e#4725#5850#0" />
-                    <element signature="e#5902#6990#0" />
-                    <element signature="e#7046#7920#0" />
-                    <element signature="e#9569#9967#0" />
-                    <element signature="e#10084#10328#0" />
-                    <element signature="e#10747#10761#0" />
+                    <element signature="e#1727#1794#0" />
+                    <element signature="e#1846#1921#0" />
+                    <element signature="e#1986#2107#0" />
+                    <element signature="e#2159#3525#0" />
+                    <element signature="e#3591#4956#0" />
+                    <element signature="e#5025#6390#0" />
+                    <element signature="e#6448#7813#0" />
+                    <element signature="e#7835#8903#0" />
+                    <element signature="e#8925#8984#0" />
+                    <element signature="e#9038#10139#0" />
+                    <element signature="e#10191#11279#0" />
+                    <element signature="e#10364#10454#0" />
+                    <element signature="e#10505#10865#0" />
+                    <element signature="e#11368#13287#0" />
+                    <element signature="e#13411#14281#0" />
+                    <element signature="e#15289#15734#0" />
+                    <element signature="e#17045#17116#0" />
+                    <element signature="e#16018#16053#0" />
+                    <element signature="e#17599#17613#0" />
+                    <element signature="e#16963#17077#0" />
+                    <element signature="e#17112#17507#0" />
+                    <element signature="e#17587#17876#0" />
+                    <element signature="e#17956#18246#0" />
+                    <element signature="e#18750#18758#0" />
+                    <element signature="e#19545#19563#0" />
+                    <element signature="e#19894#19902#0" />
+                    <element signature="e#22433#22847#0" />
+                    <element signature="e#22929#22947#0" />
+                    <element signature="e#23004#23010#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/store.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="25" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#0#70#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/node_modules/redux-undo/typings.d.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="11" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="11" />
-                  <folding>
-                    <element signature="n#!!block;n#UndoableOptions#0;n#module:redux-undo#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/interfaces/asyncActionCreators.d.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
+            <entry file="file://$PROJECT_DIR$/src/actions/helpers.test.ts">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -124,8 +121,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -142,6 +139,11 @@
       <find>not</find>
       <find>return</find>
       <find>returned</find>
+      <find>storeWithNotOrderedTiles</find>
+      <find>slise</find>
+      <find>expecte</find>
+      <find>Num</find>
+      <find>winActionCreator</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\oliva\WebstormProjects\15_puzzle\src</dir>
@@ -158,8 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/interfaces/entities.d.ts" />
-        <option value="$PROJECT_DIR$/src/reducers/game.ts" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/index.tsx" />
@@ -207,6 +207,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/setupTests.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/actions/helpers.tests.ts" />
+        <option value="$PROJECT_DIR$/src/actions/helpers.ts" />
         <option value="$PROJECT_DIR$/src/actions/asyncActionCreators.ts" />
         <option value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
       </list>
@@ -226,6 +228,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,13 +250,18 @@
               <item name="15_puzzle" type="b2602c69:ProjectViewProjectNode" />
               <item name="15_puzzle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="15_puzzle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="15_puzzle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,68 +292,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.asyncActionCreators.checkWinAsyncActionCreator.store с верным порядком черепков пройдет проверку, очистит сохраненную игру">
-    <configuration name="asyncActionCreators.checkWinAsyncActionCreator.store с верным порядком черепков пройдет проверку, вызавит action победы в игре" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
-      <test-names>
-        <test-name value="asyncActionCreators" />
-        <test-name value="checkWinAsyncActionCreator" />
-        <test-name value="store с верным порядком черепков пройдет проверку, вызавит action победы в игре" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="asyncActionCreators.checkWinAsyncActionCreator.store с верным порядком черепков пройдет проверку, очистит сохраненную игру" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
-      <test-names>
-        <test-name value="asyncActionCreators" />
-        <test-name value="checkWinAsyncActionCreator" />
-        <test-name value="store с верным порядком черепков пройдет проверку, очистит сохраненную игру" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="asyncActionCreators.checkWinAsyncActionCreator.store с неверным порядком черепков не пройдет проверку" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
-      <test-names>
-        <test-name value="asyncActionCreators" />
-        <test-name value="checkWinAsyncActionCreator" />
-        <test-name value="store с неверным порядком черепков не пройдет проверку" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="asyncActionCreators.continueTimerAsyncActionCreator.не запускает action, который инициирует новый таймер, если нет счетчика, старого таймера, времени" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
-      <test-names>
-        <test-name value="asyncActionCreators" />
-        <test-name value="continueTimerAsyncActionCreator" />
-        <test-name value="не запускает action, который инициирует новый таймер, если нет счетчика, старого таймера, времени" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="asyncActionCreators.initNewGameAsyncActionCreator" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится">
+    <configuration name="asyncActionCreators" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -355,17 +303,90 @@
       <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
       <test-names>
         <test-name value="asyncActionCreators" />
-        <test-name value="initNewGameAsyncActionCreator" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="asyncActionCreators.checkWinAsyncActionCreator" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
+      <test-names>
+        <test-name value="asyncActionCreators" />
+        <test-name value="checkWinAsyncActionCreator" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="asyncActionCreators.checkWinAsyncActionCreator.store с верным порядком черепков и таймером пройдет проверку, и остановит таймер" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
+      <test-names>
+        <test-name value="asyncActionCreators" />
+        <test-name value="checkWinAsyncActionCreator" />
+        <test-name value="store с верным порядком черепков и таймером пройдет проверку, и остановит таймер" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="asyncActionCreators.initTimerAsyncActionCreator.запускает action, который обнуляет имеющийся таймер и записывает новый таймер в state" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
+      <test-names>
+        <test-name value="asyncActionCreators" />
+        <test-name value="initTimerAsyncActionCreator" />
+        <test-name value="запускает action, который обнуляет имеющийся таймер и записывает новый таймер в state" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
+      <test-names>
+        <test-name value="asyncActionCreators" />
+        <test-name value="moveTileAsyncActionCreator" />
+        <test-name value="после перемещения черепка, если таймер не был запущен, таймер запустится" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="asyncActionCreators.moveTileAsyncActionCreator.черепки, расположенные не рядом с дыркой, не будут подвинуты" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
+      <test-names>
+        <test-name value="asyncActionCreators" />
+        <test-name value="moveTileAsyncActionCreator" />
+        <test-name value="черепки, расположенные не рядом с дыркой, не будут подвинуты" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.asyncActionCreators.checkWinAsyncActionCreator.store с верным порядком черепков пройдет проверку, очистит сохраненную игру" />
-        <item itemvalue="Jest.asyncActionCreators.checkWinAsyncActionCreator.store с верным порядком черепков пройдет проверку, вызавит action победы в игре" />
-        <item itemvalue="Jest.asyncActionCreators.checkWinAsyncActionCreator.store с неверным порядком черепков не пройдет проверку" />
-        <item itemvalue="Jest.asyncActionCreators.initNewGameAsyncActionCreator" />
-        <item itemvalue="Jest.asyncActionCreators.continueTimerAsyncActionCreator.не запускает action, который инициирует новый таймер, если нет счетчика, старого таймера, времени" />
+        <item itemvalue="Jest.asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится" />
+        <item itemvalue="Jest.asyncActionCreators" />
+        <item itemvalue="Jest.asyncActionCreators.checkWinAsyncActionCreator" />
+        <item itemvalue="Jest.asyncActionCreators.checkWinAsyncActionCreator.store с верным порядком черепков и таймером пройдет проверку, и остановит таймер" />
+        <item itemvalue="Jest.asyncActionCreators.initTimerAsyncActionCreator.запускает action, который обнуляет имеющийся таймер и записывает новый таймер в state" />
       </list>
     </recent_temporary>
   </component>
@@ -386,35 +407,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="asyncActionCreators_continueTimerAsyncActionCreator_не_запускает_action,_который_инициирует_новый_таймер,_если_нет_счетчика,_старого_таймера,_времени - 2019.02.15 at 01h 30m 23s.xml">
-      <configuration name="asyncActionCreators.continueTimerAsyncActionCreator.не запускает action, который инициирует новый таймер, если нет счетчика, старого таймера, времени" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="asyncActionCreators_checkWinAsyncActionCreator - 2019.02.17 at 13h 37m 37s.xml">
+      <configuration name="asyncActionCreators.checkWinAsyncActionCreator" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="asyncActionCreators_initNewGameAsyncActionCreator - 2019.02.15 at 14h 53m 54s.xml">
-      <configuration name="asyncActionCreators.initNewGameAsyncActionCreator" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="asyncActionCreators - 2019.02.17 at 15h 30m 50s.xml">
+      <configuration name="asyncActionCreators" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="asyncActionCreators_initNewGameAsyncActionCreator - 2019.02.15 at 14h 55m 40s.xml">
-      <configuration name="asyncActionCreators.initNewGameAsyncActionCreator" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="asyncActionCreators_moveTileAsyncActionCreator_после_перемещения_черепка,_если_таймер_не_был_запущен,_таймер_запустится - 2019.02.17 at 15h 31m 36s.xml">
+      <configuration name="asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="asyncActionCreators_initNewGameAsyncActionCreator - 2019.02.15 at 14h 56m 37s.xml">
-      <configuration name="asyncActionCreators.initNewGameAsyncActionCreator" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="asyncActionCreators_moveTileAsyncActionCreator_после_перемещения_черепка,_если_таймер_не_был_запущен,_таймер_запустится - 2019.02.17 at 15h 33m 27s.xml">
+      <configuration name="asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="asyncActionCreators_initNewGameAsyncActionCreator - 2019.02.15 at 14h 57m 00s.xml">
-      <configuration name="asyncActionCreators.initNewGameAsyncActionCreator" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="asyncActionCreators_moveTileAsyncActionCreator_после_перемещения_черепка,_если_таймер_не_был_запущен,_таймер_запустится - 2019.02.17 at 15h 34m 47s.xml">
+      <configuration name="asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="asyncActionCreators_checkWinAsyncActionCreator_store_с_неверным_порядком_черепков_не_пройдет_проверку - 2019.02.15 at 23h 15m 39s.xml">
-      <configuration name="asyncActionCreators.checkWinAsyncActionCreator.store с неверным порядком черепков не пройдет проверку" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="asyncActionCreators_moveTileAsyncActionCreator_после_перемещения_черепка,_если_таймер_не_был_запущен,_таймер_запустится - 2019.02.17 at 15h 35m 47s.xml">
+      <configuration name="asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="asyncActionCreators_checkWinAsyncActionCreator_store_с_неверным_порядком_черепков_не_пройдет_проверку - 2019.02.15 at 23h 17m 47s.xml">
-      <configuration name="asyncActionCreators.checkWinAsyncActionCreator.store с неверным порядком черепков не пройдет проверку" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="asyncActionCreators_moveTileAsyncActionCreator_после_перемещения_черепка,_если_таймер_не_был_запущен,_таймер_запустится - 2019.02.17 at 15h 40m 53s.xml">
+      <configuration name="asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="asyncActionCreators_checkWinAsyncActionCreator_store_с_верным_порядком_черепков_пройдет_проверку,_вызавит_action_победы_в_игре - 2019.02.15 at 23h 27m 04s.xml">
-      <configuration name="asyncActionCreators.checkWinAsyncActionCreator.store с верным порядком черепков пройдет проверку, вызавит action победы в игре" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="asyncActionCreators_moveTileAsyncActionCreator_после_перемещения_черепка,_если_таймер_не_был_запущен,_таймер_запустится - 2019.02.17 at 15h 42m 37s.xml">
+      <configuration name="asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="asyncActionCreators_checkWinAsyncActionCreator_store_с_верным_порядком_черепков_пройдет_проверку,_вызавит_action_победы_в_игре - 2019.02.15 at 23h 28m 45s.xml">
-      <configuration name="asyncActionCreators.checkWinAsyncActionCreator.store с верным порядком черепков пройдет проверку, вызавит action победы в игре" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="asyncActionCreators_moveTileAsyncActionCreator_после_перемещения_черепка,_если_таймер_не_был_запущен,_таймер_запустится - 2019.02.17 at 15h 45m 31s.xml">
+      <configuration name="asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="asyncActionCreators_checkWinAsyncActionCreator_store_с_верным_порядком_черепков_пройдет_проверку,_очистит_сохраненную_игру - 2019.02.15 at 23h 30m 20s.xml">
-      <configuration name="asyncActionCreators.checkWinAsyncActionCreator.store с верным порядком черепков пройдет проверку, очистит сохраненную игру" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="asyncActionCreators_moveTileAsyncActionCreator_после_перемещения_черепка,_если_таймер_не_был_запущен,_таймер_запустится - 2019.02.17 at 15h 46m 07s.xml">
+      <configuration name="asyncActionCreators.moveTileAsyncActionCreator.после перемещения черепка, если таймер не был запущен, таймер запустится" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -429,7 +450,7 @@
       <window_info id="Structure" order="2" weight="0.24968314" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32916668" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24722221" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -468,23 +489,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/globals.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="174" column="94" selection-start-line="174" selection-start-column="94" selection-end-line="174" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/states.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/redux-undo/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/redux/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -743,24 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/jest/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="543" column="68" selection-start-line="543" selection-start-column="60" selection-end-line="543" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/actions.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/timerReducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -774,13 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/actionCreators.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -791,10 +774,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/actionCreators.ts">
+    <entry file="file://$PROJECT_DIR$/src/store.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="170">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="104" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -808,67 +794,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/timerReducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/interfaces/asyncActionCreators.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        <state relative-caret-position="374">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store.ts">
+    <entry file="file://$PROJECT_DIR$/src/actions/actionCreators.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="25" />
+        <state relative-caret-position="157">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
-            <element signature="e#0#70#0" expanded="true" />
+            <element signature="e#0#205#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfaces/states.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/helpers.test.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/jest/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="650" column="22" selection-start-line="650" selection-start-column="8" selection-end-line="650" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/helpers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfaces/actionCreators.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/asyncActionCreators.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="78" column="21" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="21" />
+        <state relative-caret-position="252">
+          <caret line="93" column="42" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="42" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <element signature="e#892#1112#0" />
             <element signature="e#1294#1468#0" />
             <element signature="e#1719#1891#0" />
-            <element signature="e#2943#3565#0" />
-            <element signature="e#3826#4934#0" />
+            <element signature="e#2127#2692#0" />
+            <element signature="e#3833#4941#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="508" column="65" selection-start-line="508" selection-start-column="65" selection-end-line="508" selection-end-column="65" />
+        <state relative-caret-position="429">
+          <caret line="812" column="42" selection-start-line="812" selection-start-column="42" selection-end-line="812" selection-end-column="42" />
+          <caret line="818" column="42" selection-start-line="818" selection-start-column="42" selection-end-line="818" selection-end-column="42" />
+          <caret line="821" column="42" selection-start-line="821" selection-start-column="42" selection-end-line="821" selection-end-column="42" />
+          <caret line="827" column="42" selection-start-line="827" selection-start-column="42" selection-end-line="827" selection-end-column="42" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
-            <element signature="e#1383#1450#0" />
-            <element signature="e#1502#1577#0" />
-            <element signature="e#1827#1947#0" />
-            <element signature="e#1813#3138#0" />
-            <element signature="e#1843#3128#0" />
-            <element signature="e#3438#4763#0" />
-            <element signature="e#3468#4753#0" />
-            <element signature="e#4832#6157#0" />
-            <element signature="e#4862#6147#0" />
-            <element signature="e#6486#6544#0" />
-            <element signature="e#6676#6755#0" />
-            <element signature="e#6821#6878#0" />
-            <element signature="e#6947#6998#0" />
-            <element signature="e#4612#4671#0" />
-            <element signature="e#4725#5850#0" />
-            <element signature="e#5902#6990#0" />
-            <element signature="e#7046#7920#0" />
-            <element signature="e#9569#9967#0" />
-            <element signature="e#10084#10328#0" />
-            <element signature="e#10747#10761#0" />
+            <element signature="e#1727#1794#0" />
+            <element signature="e#1846#1921#0" />
+            <element signature="e#1986#2107#0" />
+            <element signature="e#2159#3525#0" />
+            <element signature="e#3591#4956#0" />
+            <element signature="e#5025#6390#0" />
+            <element signature="e#6448#7813#0" />
+            <element signature="e#7835#8903#0" />
+            <element signature="e#8925#8984#0" />
+            <element signature="e#9038#10139#0" />
+            <element signature="e#10191#11279#0" />
+            <element signature="e#10364#10454#0" />
+            <element signature="e#10505#10865#0" />
+            <element signature="e#11368#13287#0" />
+            <element signature="e#13411#14281#0" />
+            <element signature="e#15289#15734#0" />
+            <element signature="e#17045#17116#0" />
+            <element signature="e#16018#16053#0" />
+            <element signature="e#17599#17613#0" />
+            <element signature="e#16963#17077#0" />
+            <element signature="e#17112#17507#0" />
+            <element signature="e#17587#17876#0" />
+            <element signature="e#17956#18246#0" />
+            <element signature="e#18750#18758#0" />
+            <element signature="e#19545#19563#0" />
+            <element signature="e#19894#19902#0" />
+            <element signature="e#22433#22847#0" />
+            <element signature="e#22929#22947#0" />
+            <element signature="e#23004#23010#0" />
           </folding>
         </state>
       </provider>
