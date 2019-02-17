@@ -1,10 +1,10 @@
 import * as React from 'react';
-import TopConsole from '.';
+import Backdrop from '.';
 import renderer from 'react-test-renderer';
 
-describe('TopConsole', () => {
+describe('Backdrop', () => {
   it('он отображается', () => {
-    const tree = renderer.create(<TopConsole />).toJSON();
+    const tree = renderer.create(<Backdrop />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
