@@ -1,8 +1,8 @@
 import {createSelector, Selector} from 'reselect';
-import {IAppState} from './store';
-import {ITilesState} from './interfaces/states';
-import {ITile} from './interfaces/entities';
-import {TILE_MARGIN, TILE_SIZE} from './constants/config';
+import {IAppState} from '../store';
+import {ITilesState} from '../interfaces/states';
+import {ITile} from '../interfaces/entities';
+import {TILE_MARGIN, TILE_SIZE} from '../constants/config';
 
 export interface ITileWithCoords {
   title: number;
