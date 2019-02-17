@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrapper он отображается 1`] = `
+.c0 {
+  border-radius: 4px;
+  padding: 6px 10px;
+  background-color: #0d9095;
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+}
+
+.c0:hover {
+  background-color: #17bbc2;
+}
+
+.c0:disabled {
+  background-color: #999;
+}
+
+<button
+  className="c0"
+/>
+`;

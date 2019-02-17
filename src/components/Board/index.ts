@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {BORD_BORDER, BORD_SIZE} from '../constants/config';
+import {BORD_BORDER, BORD_SIZE} from '../../constants/config';
 
 const StyledBoard = styled.div`
   width: ${BORD_SIZE}px;

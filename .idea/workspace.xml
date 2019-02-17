@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac72ca5-e0aa-4ba9-9307-30cc0b6dd05c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/reducers/reducers.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Board/Board.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BottomConsole/BottomConsole.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Counter/Counter.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Timer/Timer.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TopConsole/TopConsole.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Wrapper/Wrapper.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/counterReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/counterReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/tilesReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/tilesReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/timerReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/timerReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Board.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BottomConsole.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BottomConsole/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Counter/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopConsole.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopConsole/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wrapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wrapper/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,91 +31,62 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/reducers/tilesReducer.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="295">
-                  <caret line="35" column="33" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#0#49#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="532" column="49" lean-forward="true" selection-start-line="532" selection-start-column="41" selection-end-line="532" selection-end-column="49" />
-                  <folding>
-                    <element signature="e#0#84#0" expanded="true" />
-                    <element signature="e#2215#3581#0" />
-                    <element signature="e#3647#5012#0" />
-                    <element signature="e#5081#6446#0" />
-                    <element signature="e#6504#7869#0" />
-                    <element signature="e#7891#8959#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/node_modules/@types/jest/index.d.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1596">
-                  <caret line="455" column="14" selection-start-line="455" selection-start-column="14" selection-end-line="455" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/actions/actionCreators.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="185">
-                  <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#0#205#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/reducers/reducers.test.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="244">
-                  <caret line="267" column="32" selection-start-line="267" selection-start-column="32" selection-end-line="267" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#0#62#0" expanded="true" />
-                    <element signature="e#342#1303#0" />
-                    <element signature="e#1367#1488#0" />
-                    <element signature="e#1559#1654#0" />
-                    <element signature="e#1706#1785#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/interfaces/states.d.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Counter/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Board/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Board/Board.test.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="5" selection-start-line="6" selection-start-column="2" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.test.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="19" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Counter/Counter.test.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,17 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Modal.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Bord.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Modal/Portal.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Modal/index.tsx" />
-        <option value="$PROJECT_DIR$/src/helpers.ts" />
-        <option value="$PROJECT_DIR$/src/constants/actions.ts" />
-        <option value="$PROJECT_DIR$/src/interfaces/asyncActionCreators.d.ts" />
-        <option value="$PROJECT_DIR$/src/reducers/modalReducer.ts" />
-        <option value="$PROJECT_DIR$/src/selectors.ts" />
-        <option value="$PROJECT_DIR$/src/reducers/index.ts" />
-        <option value="$PROJECT_DIR$/src/components/TopConsole.tsx" />
         <option value="$PROJECT_DIR$/src/components/Button.tsx" />
         <option value="$PROJECT_DIR$/src/components/Counter.tsx" />
         <option value="$PROJECT_DIR$/src/components/Timer.tsx" />
@@ -184,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/actions/actionCreators.test.ts" />
         <option value="$PROJECT_DIR$/src/actions/actionCreators.ts" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/setupTests.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/actions/helpers.tests.ts" />
         <option value="$PROJECT_DIR$/src/actions/asyncActionCreators.ts" />
@@ -198,6 +170,18 @@
         <option value="$PROJECT_DIR$/src/reducers/timerReducer.ts" />
         <option value="$PROJECT_DIR$/src/reducers/tilesReducer.ts" />
         <option value="$PROJECT_DIR$/src/reducers/reducers.test.ts" />
+        <option value="$PROJECT_DIR$/src/components/Wrapper/Wrapper.test.ts" />
+        <option value="$PROJECT_DIR$/src/setupTests.js" />
+        <option value="$PROJECT_DIR$/src/components/Wrapper/index.ts" />
+        <option value="$PROJECT_DIR$/src/components/Board/index.ts" />
+        <option value="$PROJECT_DIR$/src/components/Wrapper/Wrapper.test.tsx" />
+        <option value="$PROJECT_DIR$/src/components/BottomConsole/BottomConsole.test.tsx" />
+        <option value="$PROJECT_DIR$/src/components/TopConsole/TopConsole.test.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Button/Button.test.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Counter/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Board/Board.test.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Timer/Timer.test.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Counter/Counter.test.tsx" />
       </list>
     </option>
   </component>
@@ -215,7 +199,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,24 +220,27 @@
               <item name="15_puzzle" type="b2602c69:ProjectViewProjectNode" />
               <item name="15_puzzle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="15_puzzle" type="b2602c69:ProjectViewProjectNode" />
               <item name="15_puzzle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Counter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="15_puzzle" type="b2602c69:ProjectViewProjectNode" />
               <item name="15_puzzle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="selectors" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Timer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,14 +250,19 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
     <property name="ts.external.directory.path" value="C:\Users\oliva\WebstormProjects\15_puzzle\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\oliva\WebstormProjects\15_puzzle\src\components\Wrapper" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\oliva\WebstormProjects\15_puzzle\src\selectors" />
-      <recent name="C:\Users\oliva\WebstormProjects\15_puzzle" />
-      <recent name="C:\Users\oliva\WebstormProjects\15_puzzle\src\components" />
+      <recent name="C:\Users\oliva\WebstormProjects\15_puzzle\src\components\TopConsole" />
+      <recent name="C:\Users\oliva\WebstormProjects\15_puzzle\src\components\Button" />
+      <recent name="C:\Users\oliva\WebstormProjects\15_puzzle\src\components\Counter" />
+      <recent name="C:\Users\oliva\WebstormProjects\15_puzzle\src\components\Timer" />
+      <recent name="C:\Users\oliva\WebstormProjects\15_puzzle\src\components\BottomConsole" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -286,101 +277,83 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.reducers">
-    <configuration name="asyncActionCreators.moveTileAsyncActionCreator.черепки, расположенные не рядом с дыркой, не будут подвинуты" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts" />
-      <test-names>
-        <test-name value="asyncActionCreators" />
-        <test-name value="moveTileAsyncActionCreator" />
-        <test-name value="черепки, расположенные не рядом с дыркой, не будут подвинуты" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="reducers" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.Timer.отображает время">
+    <configuration name="Board" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/reducers/reducers.test.ts" />
+      <test-file value="$PROJECT_DIR$/src/components/Board/Board.test.tsx" />
       <test-names>
-        <test-name value="reducers" />
+        <test-name value="Board" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="reducers.modal" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/reducers/reducers.test.ts" />
-      <test-names>
-        <test-name value="reducers" />
-        <test-name value="modal" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="reducers.modal.возвращает initial state" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Board.имеет высоту" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/reducers/reducers.test.ts" />
+      <test-file value="$PROJECT_DIR$/src/components/Board/Board.test.tsx" />
       <test-names>
-        <test-name value="reducers" />
-        <test-name value="modal" />
-        <test-name value="возвращает initial state" />
+        <test-name value="Board" />
+        <test-name value="имеет высоту" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Timer.отображает время" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/reducers/reducers.test.ts" />
+      <test-file value="$PROJECT_DIR$/src/components/Timer/Timer.test.tsx" />
       <test-names>
-        <test-name value="reducers" />
-        <test-name value="tiles" />
-        <test-name value="обрабатывает INIT_NEW_GAME_ACTION" />
+        <test-name value="Timer" />
+        <test-name value="отображает время" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="reducers.tiles.обрабатывает MOVE_TILE_ACTION" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Timer.он отображается" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/reducers/reducers.test.ts" />
+      <test-file value="$PROJECT_DIR$/src/components/Timer/Timer.test.tsx" />
       <test-names>
-        <test-name value="reducers" />
-        <test-name value="tiles" />
-        <test-name value="обрабатывает MOVE_TILE_ACTION" />
+        <test-name value="Timer" />
+        <test-name value="он отображается" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Wrapper.он отображается (2)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/Button/Button.test.tsx" />
+      <test-names>
+        <test-name value="Wrapper" />
+        <test-name value="он отображается" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.reducers" />
-        <item itemvalue="Jest.reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" />
-        <item itemvalue="Jest.reducers.tiles.обрабатывает MOVE_TILE_ACTION" />
-        <item itemvalue="Jest.reducers.modal" />
-        <item itemvalue="Jest.reducers.modal.возвращает initial state" />
+        <item itemvalue="Jest.Timer.отображает время" />
+        <item itemvalue="Jest.Timer.он отображается" />
+        <item itemvalue="Jest.Board" />
+        <item itemvalue="Jest.Board.имеет высоту" />
+        <item itemvalue="Jest.Wrapper.он отображается (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -401,35 +374,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="reducers_tiles_обрабатывает_INIT_NEW_GAME_ACTION - 2019.02.17 at 21h 04m 37s.xml">
-      <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Wrapper_он_отображается_(2) - 2019.02.17 at 23h 13m 27s.xml">
+      <configuration name="Wrapper.он отображается (2)" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="reducers_tiles_обрабатывает_INIT_NEW_GAME_ACTION - 2019.02.17 at 21h 07m 01s.xml">
-      <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Update_snapshot_for_Wrapper_он_отображается - 2019.02.17 at 23h 13m 40s.xml">
+      <configuration name="Update snapshot for Wrapper.он отображается" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="reducers_tiles_обрабатывает_INIT_NEW_GAME_ACTION - 2019.02.17 at 21h 07m 27s.xml">
-      <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Board_имеет_высоту - 2019.02.18 at 00h 40m 11s.xml">
+      <configuration name="Board.имеет высоту" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="reducers_tiles_обрабатывает_INIT_NEW_GAME_ACTION - 2019.02.17 at 21h 08m 16s.xml">
-      <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Board_имеет_высоту - 2019.02.18 at 00h 40m 48s.xml">
+      <configuration name="Board.имеет высоту" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="reducers_tiles_обрабатывает_INIT_NEW_GAME_ACTION - 2019.02.17 at 21h 08m 38s.xml">
-      <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Board - 2019.02.18 at 00h 42m 27s.xml">
+      <configuration name="Board" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="reducers_tiles_обрабатывает_INIT_NEW_GAME_ACTION - 2019.02.17 at 21h 11m 12s.xml">
-      <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Timer_он_отображается - 2019.02.18 at 00h 43m 57s.xml">
+      <configuration name="Timer.он отображается" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="reducers_tiles_обрабатывает_INIT_NEW_GAME_ACTION - 2019.02.17 at 21h 11m 48s.xml">
-      <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Timer_он_отображается - 2019.02.18 at 00h 44m 34s.xml">
+      <configuration name="Timer.он отображается" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="reducers_tiles_обрабатывает_INIT_NEW_GAME_ACTION - 2019.02.17 at 21h 15m 03s.xml">
-      <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Update_snapshot_for_Timer_он_отображается - 2019.02.18 at 00h 44m 54s.xml">
+      <configuration name="Update snapshot for Timer.он отображается" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="reducers_tiles_обрабатывает_INIT_NEW_GAME_ACTION - 2019.02.17 at 21h 17m 06s.xml">
-      <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Timer_отображает_время - 2019.02.18 at 00h 49m 05s.xml">
+      <configuration name="Timer.отображает время" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="reducers_tiles_обрабатывает_INIT_NEW_GAME_ACTION - 2019.02.17 at 21h 18m 01s.xml">
-      <configuration name="reducers.tiles.обрабатывает INIT_NEW_GAME_ACTION" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Timer_отображает_время - 2019.02.18 at 00h 49m 29s.xml">
+      <configuration name="Timer.отображает время" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -439,12 +412,12 @@
     <frame x="-1608" y="-7" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11723701" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21229404" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.24968314" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35833332" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35833332" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -483,168 +456,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/styled-components/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1154">
-          <caret line="272" column="21" selection-start-line="272" selection-start-column="21" selection-end-line="272" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/selectors.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TopConsole.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Timer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Counter.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Wrapper.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Modal/Portal.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Modal/Backdrop.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="39" selection-start-column="39" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/react-native/globals.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="88" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Button.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Modal/PopUp.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BottomConsole.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/config.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="9846" column="4" selection-start-line="9846" selection-start-column="4" selection-end-line="9846" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Board.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Tile.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/bts-web-1/aitu/jest.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2147">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jest.config.js" />
-    <entry file="file://$PROJECT_DIR$/src/interfaces/entities.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.test.tsx" />
     <entry file="file://$PROJECT_DIR$/node_modules/@types/redux-mock-store/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -660,13 +471,6 @@
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/setupTests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -805,23 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/actionCreators.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -849,12 +636,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/tilesReducer.ts">
+    <entry file="file://$PROJECT_DIR$/src/interfaces/states.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="33" />
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/reducers.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
           <folding>
-            <element signature="e#0#49#0" expanded="true" />
+            <element signature="e#342#1303#0" />
+            <element signature="e#1367#1488#0" />
+            <element signature="e#1559#1654#0" />
+            <element signature="e#1706#1785#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/actionCreators.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#205#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -866,10 +673,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Board.ts" />
+    <entry file="file://$PROJECT_DIR$/src/components/BottomConsole.ts" />
+    <entry file="file://$PROJECT_DIR$/src/components/Wrapper/__snapshots__/Wrapper.test.tsx.snap">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wrapper/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TopConsole.ts" />
     <entry file="file://$PROJECT_DIR$/src/actions/asyncActionCreators.test.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="532" column="49" lean-forward="true" selection-start-line="532" selection-start-column="41" selection-end-line="532" selection-end-column="49" />
+        <state relative-caret-position="62">
+          <caret line="524" selection-start-line="524" selection-end-line="524" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
             <element signature="e#2215#3581#0" />
@@ -881,24 +705,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/states.d.ts">
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="17">
+          <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/reducers.test.ts">
+    <entry file="file://$PROJECT_DIR$/src/reducers/tilesReducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="267" column="32" selection-start-line="267" selection-start-column="32" selection-end-line="267" selection-end-column="32" />
+        <state relative-caret-position="180">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding>
-            <element signature="e#0#62#0" expanded="true" />
-            <element signature="e#342#1303#0" />
-            <element signature="e#1367#1488#0" />
-            <element signature="e#1559#1654#0" />
-            <element signature="e#1706#1785#0" />
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setupTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TopConsole/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Timer.tsx" />
+    <entry file="file://$PROJECT_DIR$/src/components/Counter.tsx" />
+    <entry file="file://$PROJECT_DIR$/src/components/Timer/index.tsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Button.ts" />
+    <entry file="file://$PROJECT_DIR$/src/components/Tile.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-824">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wrapper/Wrapper.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BottomConsole/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BottomConsole/BottomConsole.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TopConsole/TopConsole.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Button/Button.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Button/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Counter/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Board/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Board/Board.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" selection-start-line="6" selection-start-column="2" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Timer/Timer.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="19" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Counter/Counter.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timer он отображается 1`] = `
+<div>
+  <strong>
+    Count:
+  </strong>
+   
+  11
+</div>
+`;
