@@ -10,19 +10,19 @@ describe('Board', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('имеет ширину', () => {
+  it('имеет заданную ширину', () => {
     const tree = renderer.create(<Board />).toJSON();
 
     expect(tree).toHaveStyleRule('width', `${BORD_SIZE}px`);
   });
 
-  it('имеет высоту', () => {
+  it('имеет заданную высоту', () => {
     const tree = renderer.create(<Board />).toJSON();
 
     expect(tree).toHaveStyleRule('height', `${BORD_SIZE}px`);
   });
 
-  it('имеет ширину в мобильном виде', () => {
+  it('имеет заданную ширину в мобильном виде', () => {
     const tree = renderer.create(<Board />).toJSON();
 
     expect(tree).toHaveStyleRule(
@@ -34,7 +34,7 @@ describe('Board', () => {
     );
   });
 
-  it('имеет высоту в мобильном виде', () => {
+  it('имеет заданную высоту в мобильном виде', () => {
     const tree = renderer.create(<Board />).toJSON();
 
     expect(tree).toHaveStyleRule(

@@ -15,6 +15,7 @@ const PopUp: React.FC<IProps> = ({onClose, children}): JSX.Element => (
     </StyledPopUpContent>
     <StyledPopUpCloseButton
       onClick={onClose}
+      type='button'
     >
       Close
     </StyledPopUpCloseButton>

@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PopUp StyledComponents StyledPopUpCloseButton отображается 1`] = `
+.c0 {
+  border-radius: 4px;
+  padding: 6px 10px;
+  background-color: #358ada;
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  width: 50%;
+  margin-top: 20px;
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`PopUp StyledComponents StyledPopUpContent отображается 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`PopUp StyledComponents StyledPopUpHeader отображается 1`] = `
+.c0 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`PopUp StyledComponents StyledPopUpWrapper отображается 1`] = `
 .c0 {
   width: 300px;

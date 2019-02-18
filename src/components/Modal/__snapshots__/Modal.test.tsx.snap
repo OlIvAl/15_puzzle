@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal он отображается 1`] = `
+<Portal>
+  <PopUp
+    onClose={[MockFunction]}
+  >
+    test content
+  </PopUp>
+  <styled.div
+    onClick={[MockFunction]}
+  />
+</Portal>
+`;

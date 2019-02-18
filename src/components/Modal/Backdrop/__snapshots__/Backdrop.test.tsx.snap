@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Wrapper он отображается 1`] = `
+exports[`Backdrop он отображается 1`] = `
 .c0 {
   position: fixed;
   top: 0;

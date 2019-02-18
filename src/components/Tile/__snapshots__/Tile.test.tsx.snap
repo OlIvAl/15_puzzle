@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tile он отображается 1`] = `
+<styled.div
+  left={0}
+  onClick={[Function]}
+  top={0}
+>
+  1
+</styled.div>
+`;

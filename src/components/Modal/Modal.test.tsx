@@ -1,5 +1,5 @@
 import * as React from 'react';
-import PopUp from '.';
+import Modal from '.';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 
@@ -7,17 +7,18 @@ interface IProps {
   onClose: () => void;
 }
 
-describe('PopUp', () => {
+describe('Modal', () => {
   const onClose = jest.fn();
   const CONTENT: string = 'test content';
 
   it('он отображается', () => {
+
     const wrapper = shallow<React.FC<IProps>>(
-      <PopUp
+      <Modal
         onClose={onClose}
       >
         {CONTENT}
-      </PopUp>
+      </Modal>
     );
 
     expect(shallowToJson(wrapper)).toMatchSnapshot();
@@ -25,27 +26,25 @@ describe('PopUp', () => {
 
   it('ссодержит, переданный в него, контент', () => {
     const wrapper = shallow<IProps>(
-      <PopUp
+      <Modal
         onClose={onClose}
       >
         {CONTENT}
-      </PopUp>
+      </Modal>
     );
 
     expect(wrapper.contains(CONTENT)).toEqual(true);
   });
 
-  it('при клике на кнопку вызовится onClose', () => {
+  it('дочерний компонент PopUp содержит onClose', () => {
     const wrapper = shallow<IProps>(
-      <PopUp
+      <Modal
         onClose={onClose}
       >
         {CONTENT}
-      </PopUp>
+      </Modal>
     );
 
-    wrapper.find('[type="button"]').simulate('click');
-
-    expect(onClose).toHaveBeenCalled();
+    expect(wrapper.find('PopUp').prop('onClose')).toEqual(onClose);
   });
 });

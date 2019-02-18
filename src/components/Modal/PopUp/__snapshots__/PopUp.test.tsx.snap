@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopUp он отображается 1`] = `
+<styled.div>
+  <styled.div>
+    You WIN!!!
+  </styled.div>
+  <styled.div>
+    test content
+  </styled.div>
+  <styled.button
+    onClick={[MockFunction]}
+    type="button"
+  >
+    Close
+  </styled.button>
+</styled.div>
+`;
